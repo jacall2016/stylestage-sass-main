@@ -1,6 +1,11 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&display=swap");
 
+@font-face {
+  font-family: minecraft-title;
+  src: url(minecraft-title.ttf);
+  }
+
 :root {
   --color-primary: #C4B9B6ff;
   --color-primary-alt: #8FCA5Cff;
@@ -745,4 +750,8 @@ nav ul li {
   height: 1em;
   margin-right: 0.25em;
   fill: currentColor;
+}
+
+h1, h2, h3 ,h4, h5, p {
+  font-family: minecraft-title;
 }
