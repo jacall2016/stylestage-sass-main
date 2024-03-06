@@ -1,18 +1,18 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&display=swap");
 @font-face {
-  font-family: minecraft-title;
-  src: url(stylestage-sass-mainpublicminecraft-title.ttf);
+  font-family: "minecraft-title";
+  src: url("../public/minecraft-title.ttf");
 }
 :root {
-  --color-primary: #be7844;
+  --color-primary: #c4b9b6;
   --color-primary-alt: #8fca5c;
   --color-secondary: #457520;
-  --color-background: #c4b9b6;
-  --color-text: #705744;
+  --color-background: #262522;
+  --color-text: #8b817e;
   --color-light: #c4b9b6;
-  --color-anchor: #be7844;
-  --font-family: "Baloo 2", sans-serif;
+  --color-anchor: #c4b9b6;
+  --font-family: "minecraft-title", sans-serif;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
   --font-size-h2: 3rem;
@@ -561,6 +561,9 @@ nav ul li {
   display: grid;
   justify-items: center;
   grid-gap: 1rem;
+  color: blue;
+  background-color: red;
+  font-family: "minecraft-title", sans-serif;
 }
 .profile .container > a {
   min-height: 2em;
@@ -600,7 +603,7 @@ nav ul li {
     margin-bottom: 0;
     border-radius: var(--border-radius);
     background-color: var(--color-light);
-    box-shadow: 0 2px 5px rgba(190, 120, 68, 0.15);
+    box-shadow: 0 2px 5px rgba(196, 185, 182, 0.15);
   }
   .profile ul {
     justify-content: unset;
