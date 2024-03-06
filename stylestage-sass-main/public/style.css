@@ -201,9 +201,9 @@ blockquote::after {
 }
 
 body {
-  background-color: var(--color-background);
   color: var(--color-text);
   font-family: var(--font-family);
+  background-image: url("/stylestage-sass-main/public/images/render1.png");
 }
 
 main {
@@ -561,9 +561,6 @@ nav ul li {
   display: grid;
   justify-items: center;
   grid-gap: 1rem;
-  color: blue;
-  background-color: red;
-  font-family: "minecraft-title", sans-serif;
 }
 .profile .container > a {
   min-height: 2em;
