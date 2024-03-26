@@ -1,9 +1,11 @@
-// stylelint-disable no-descending-specificity
 body {
   //background-color: var(--color-background);
   color: var(--color-text);
   font-family: var(--font-family);
   background-image: url("/stylestage-sass-main/public/images/render1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* Keep background stationary */
 }
 
 main {
