@@ -1,0 +1,21 @@
+.page-footer {
+  padding: 3rem 1rem;
+  color: var(--color-light);
+}
+
+.page-footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers the items horizontally */
+}
+
+.page-footer li {
+  margin: 0.5rem; /* Adjust the spacing between buttons */
+}
+
+@media only screen and (max-width: 768px) {
+  .page-footer ul {
+    flex-direction: column; /* Switch to column layout on mobile */
+    align-items: center; /* Centers the items vertically */
+  }
+}
