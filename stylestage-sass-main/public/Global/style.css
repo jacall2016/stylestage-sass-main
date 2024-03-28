@@ -65,7 +65,7 @@ abbr, acronym {
 }
 
 header {
-  color: red;
+  color: skyblue;
   background-image: url("/stylestage-sass-main/public/images/Grass_Block.webp");
   background-repeat: repeat-x;
   background-size: contain;
@@ -115,17 +115,29 @@ nav {
   background-color: #c4b9b6;
   color: #262522;
   font-family: var(--font-family);
-  /* Add your nav styles here */
+}
+nav ul {
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+}
+nav ul li {
+  margin: 0 10px; /* Add space between the buttons */
+}
+nav ul li a {
+  color: #262522;
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+nav ul li a:hover {
+  color: #413f3a; /* Adjust the color on hover */
 }
 
 a {
   color: #457520;
   text-decoration: none;
 }
-a:hover {
-  text-decoration: underline;
-}
-
 .skip-link {
   position: absolute;
   padding: var(--padding);

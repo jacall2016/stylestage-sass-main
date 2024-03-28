@@ -1,0 +1,26 @@
+// Nav Styles
+nav {
+  background-color: $color-primary;
+  color: $color-background;
+  font-family: var(--font-family);
+  
+  ul {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+
+    li {
+      margin: 0 10px; /* Add space between the buttons */
+      a {
+        color: $color-background;
+        text-decoration: none; /* Remove underline */
+        transition: color 0.3s; /* Smooth transition for hover effect */
+      }
+    
+      a:hover {
+        color: lighten($color-background, 10%); /* Adjust the color on hover */
+      }
+    }
+  }
+}
