@@ -1,0 +1,46 @@
+a {
+  color: $color-secondary; // Set your desired link color
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  padding: var(--padding); // Use padding variable
+  // Add any additional styles for skip-link if needed
+}
+
+.link-github {
+    color: $color-background; // Set your desired link background color
+}
+
+.link-guidelines {
+  // Add styles for guidelines link
+}
+
+.link-downloadscss {
+  // Add styles for download CSS link
+}
+
+.link-downloadhtml {
+  // Add styles for download HTML link
+}
+
+.link-codepen {
+  // Add styles for CodePen link
+}
+
+.link-allstyles {
+  // Add styles for all styles link
+}
+
+.link-rss {
+  // Add styles for RSS link
+}
+
+.link-support {
+  // Add styles for support link
+}

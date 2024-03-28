@@ -1,33 +1,31 @@
 body {
-  //background-color: var(--color-background);
+  //background-color: $color-background;
   color: var(--color-text);
   font-family: var(--font-family);
   background-image: url("/stylestage-sass-main/public/images/render1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; /* Keep background stationary */
+  overflow: hidden; /* Hide the scrollbar for all directions */
+}
+
+/* Show scrollbar for Firefox and other browsers */
+body::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for webkit browsers */
+}
+
+/* Show scrollbar for other browsers */
+body {
+  scrollbar-width: none; /* Hide scrollbar for Firefox and other browsers */
 }
 
 main {
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-
-  &:focus {
-    outline: none;
-  }
-
-  h3 {
-    color: var(--color-primary);
-  }
+  background-color: var(--color-darken);
 }
 
 article {
   section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
+
   }
 }
 
@@ -49,9 +47,16 @@ article,
 
 .page-footer ul,
 .features {
-  display: grid;
+  display:flex;
+  flex-direction: row;
   margin: 0 0 2rem;
   padding: 0;
   grid-gap: 1em;
   list-style: none;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent; /* Hide scrollbar background */
 }

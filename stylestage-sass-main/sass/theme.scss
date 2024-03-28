@@ -1,0 +1,33 @@
+// Theme Colors
+$color-primary: #c4b9b6ff !default;
+$color-primary-alt: #8fca5cff !default;
+$color-secondary: #457520ff !default;
+$color-background: #262522 !default;
+
+$font-weight-strong: 500 !default;
+$font-size-h1: 4rem !default;
+$font-size-h2: 2rem !default;
+$font-size-h3: 1.5rem !default;
+$font-size-h4: 1.25rem !default;
+$font-size-text: 1rem !default;
+
+$padding: 20px !default; // Define padding variable
+
+$font-sizes: (
+  h1: $font-size-h1,
+  h2: $font-size-h2,
+  h3: $font-size-h3,
+  h4: $font-size-h4,
+  text: $font-size-text,
+);
+    
+// stylelint-disable
+:root {
+    --font-family: 'Minecraftia', sans-serif;
+
+    @each $key, $size in $font-sizes {
+        --font-size-#{$key}: #{$size};
+    }
+
+    --padding: #{$padding}; // Set padding variable
+}

@@ -1,0 +1,36 @@
+// _reset.scss
+
+// Reset Box Sizing
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+// Remove Margin and Padding
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, figure, blockquote, fieldset, legend {
+  margin: 0;
+  padding: 0;
+}
+
+// Typography Reset
+body {
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-text;
+  line-height: $line-height-base;
+}
+
+// Remove List Styles
+ul, ol {
+  list-style: none;
+}
+
+// Remove Decoration on Links
+a {
+  text-decoration: none;
+}
+
+// Remove Outline on Focus
+:focus {
+  outline: none;
+}
+
+// Additional Resets...

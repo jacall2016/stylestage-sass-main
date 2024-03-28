@@ -1,0 +1,58 @@
+// Reset Styles
+
+// Reset box model
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  // Remove list styles
+  ul, ol {
+    list-style: none;
+  }
+  
+  // Remove default margins and paddings
+  body, h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+  }
+  
+  // Set base font size and family
+  body {
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  // Remove anchor text decoration and color
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  // Remove default button styles
+  button, input, optgroup, select, textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+  }
+  
+  // Remove button padding
+  button {
+    padding: 0;
+  }
+  
+  // Normalize form elements
+  button, input, select, textarea {
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+  
+  // Remove default styles for inline elements
+  abbr, acronym {
+    border: none;
+    cursor: default;
+  }
+  
