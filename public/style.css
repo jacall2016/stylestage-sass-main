@@ -134,6 +134,19 @@ body::before {
   /* Ensure content is above the pseudo-element */
 }
 
+.container {
+  display: block;
+}
+
+article {
+  display: block;
+  color: lightgrey;
+  background-color: rgba(23, 23, 23, 0.65);
+  text-align: center;
+  padding: 20px;
+  border-radius: 25px;
+}
+
 .profile {
   padding: 20px;
   /* Add padding */
