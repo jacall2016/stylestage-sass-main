@@ -62,3 +62,13 @@ body::before {
 #styles {
 
 }
+
+.container {
+  display: block;
+}
+
+article {
+  display: block;
+  background-color: rgba(143, 143, 143, 0.45);
+  text-align: center;
+}

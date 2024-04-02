@@ -134,6 +134,16 @@ body::before {
   /* Ensure content is above the pseudo-element */
 }
 
+.container {
+  display: block;
+}
+
+article {
+  display: block;
+  background-color: rgba(143, 143, 143, 0.45);
+  text-align: center;
+}
+
 .profile {
   background-color: red;
   /* Set background color */
