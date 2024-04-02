@@ -1,0 +1,41 @@
+.profile {
+    background-color: red; /* Set background color */
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Add border radius */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+  
+    .container {
+      max-width: 400px; /* Set maximum width */
+      margin: 0 auto; /* Center the container horizontally */
+    }
+  
+    #profile-title {
+      margin-bottom: 15px; /* Add space below the title */
+      color: #333; /* Set title color */
+    }
+  
+    ul {
+      list-style-type: none; /* Remove default list styles */
+      padding: 0; /* Remove default padding */
+      margin: 0; /* Remove default margin */
+  
+      li {
+        margin-bottom: 10px; /* Add space between list items */
+        font-size: 16px; /* Set font size for list items */
+      }
+  
+      span {
+        margin-right: 5px; /* Add space between spans */
+      }
+  
+      a {
+        color: #007bff; /* Set link color */
+        text-decoration: none; /* Remove default underline */
+        transition: color 0.3s ease; /* Add smooth transition for color change */
+  
+        &:hover {
+          color: #0056b3; /* Change link color on hover */
+        }
+      }
+    }
+  }  

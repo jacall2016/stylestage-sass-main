@@ -12,7 +12,7 @@ body::before {
   width: 100%; /* Cover the entire viewport */
   height: 100%;
   z-index: -1; /* Move the pseudo-element behind other content */
-  background-image: url("/stylestage-sass-main/public/images/render1.png");
+  background-image: url("/images/render1.png");
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.8; /* Adjust the opacity as needed */
