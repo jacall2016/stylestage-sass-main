@@ -75,7 +75,7 @@ header {
   align-items: center;
 }
 header .container {
-  background-color: rgba(0, 0, 0, 0.578);
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -135,8 +135,6 @@ body::before {
 }
 
 .profile {
-  background-color: red;
-  /* Set background color */
   padding: 20px;
   /* Add padding */
   border-radius: 10px;
@@ -150,11 +148,140 @@ body::before {
   margin: 0 auto;
   /* Center the container horizontally */
 }
+.profile .container ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  /* Center the grid horizontally */
+  align-items: center;
+  /* Center the grid vertically */
+}
+.profile .container ul li {
+  width: 300px;
+  height: 300px;
+  border-radius: 50% 50% 50% 0;
+  margin: 0px;
+  display: flex;
+  /* Use flexbox to center contents */
+  justify-content: center;
+  /* Center contents horizontally */
+  align-items: center;
+  /* Center contents vertically */
+}
+.profile .container ul li:nth-child(1) {
+  background-color: #8fca5cff;
+  /* Set your desired color */
+  border-top: #457520ff 5px solid;
+  border-right: #457520ff 5px solid;
+  transform: rotate(-90deg);
+}
+.profile .container ul li:nth-child(1):hover {
+  z-index: 1;
+  transform: scale(1.2) rotate(90deg);
+  transition: transform 0.5s ease-in-out;
+}
+.profile .container ul li:nth-child(1):hover span {
+  transform: rotate(-90deg);
+  transition: transform 0.5s ease-in-out;
+}
+.profile .container ul li:nth-child(1) span {
+  transform: rotate(90deg);
+}
+.profile .container ul li:nth-child(2) {
+  background-color: #457520ff;
+  /* Set your desired color */
+  border-top: #8fca5cff 5px solid;
+  border-right: #8fca5cff 5px solid;
+  display: flex;
+  flex-direction: column;
+}
+.profile .container ul li:nth-child(2):hover {
+  z-index: 1;
+  transform: scale(1.2) rotate(180deg);
+  transition: transform 0.5s ease-in-out;
+}
+.profile .container ul li:nth-child(2):hover span {
+  transition: transform 0.5s ease-in-out;
+  transform: rotate(-180deg);
+}
+.profile .container ul li:nth-child(3) {
+  background-color: #457520ff;
+  /* Set your desired color */
+  border-top: #8fca5cff 5px solid;
+  border-right: #8fca5cff 5px solid;
+  transform: rotate(-180deg);
+}
+.profile .container ul li:nth-child(3):hover {
+  z-index: 1;
+  transform: scale(1.2) rotate(-360deg);
+  transition: transform 0.5s ease-in-out;
+}
+.profile .container ul li:nth-child(3):hover span {
+  transition: transform 0.5s ease-in-out;
+  transform: rotate(0deg);
+}
+.profile .container ul li:nth-child(3) span {
+  transform: rotate(180deg);
+}
+.profile .container ul li:nth-child(4) {
+  background-color: #8fca5cff;
+  /* Set your desired color */
+  border-top: #457520ff 5px solid;
+  border-right: #457520ff 5px solid;
+  transform: rotate(90deg);
+}
+.profile .container ul li:nth-child(4):hover {
+  z-index: 1;
+  transform: scale(1.2) rotate(270deg);
+  transition: transform 0.5s ease-in-out;
+}
+.profile .container ul li:nth-child(4):hover span {
+  transition: transform 0.5s ease-in-out;
+  transform: rotate(90deg);
+}
+.profile .container ul li:nth-child(4) span {
+  transform: rotate(-90deg);
+}
+.profile .profile-twitter span:first-child {
+  position: relative;
+  /* Set position relative to allow absolute positioning of pseudo-element */
+  display: inline-block;
+  /* Ensure the span occupies only the necessary space */
+}
+.profile .profile-twitter span:first-child::before {
+  content: "";
+  /* Ensure the pseudo-element has no content */
+  position: absolute;
+  /* Position the pseudo-element relative to its parent */
+  left: 0;
+  /* Align the pseudo-element to the left edge of its parent */
+  top: 50%;
+  /* Align the pseudo-element vertically */
+  transform: translateY(-50%);
+  /* Center the pseudo-element vertically */
+  width: 20px;
+  /* Set the width of the pseudo-element */
+  height: 20px;
+  /* Set the height of the pseudo-element */
+  background-image: url("/images/icons8-twitterx.svg");
+  /* Set the background image of the pseudo-element to the Twitter icon */
+  background-size: cover;
+  /* Ensure the background image covers the pseudo-element */
+}
+.profile .profile-twitter span:first-child {
+  overflow: hidden;
+  /* Hide any overflowing content */
+  white-space: nowrap;
+  /* Prevent wrapping of text */
+  text-indent: 100%;
+  /* Push the text content off-screen */
+}
 .profile #profile-title {
   margin-bottom: 15px;
   /* Add space below the title */
   color: #333;
   /* Set title color */
+  font-size: 1.25rem;
 }
 .profile ul {
   list-style-type: none;
@@ -185,6 +312,108 @@ body::before {
 .profile ul a:hover {
   color: #0056b3;
   /* Change link color on hover */
+}
+
+#styles .container {
+  max-width: 400px;
+  /* Set maximum width */
+  margin: 0 auto;
+  /* Center the container horizontally */
+}
+#styles .container ul.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  /* Center the grid horizontally */
+  align-items: center;
+  /* Center the grid vertically */
+  list-style: none;
+  padding: 0;
+  margin: 20px;
+}
+#styles .container ul.features li {
+  width: 300px;
+  height: 300px;
+  border-radius: 50% 0 50% 0;
+  margin: 0px;
+  display: flex;
+  /* Use flexbox to center contents */
+  justify-content: center;
+  /* Center contents horizontally */
+  align-items: center;
+  /* Center contents vertically */
+  position: relative;
+  margin-right: -80px;
+}
+#styles .container ul.features li:nth-child(1) {
+  background-color: #9000ff;
+  /* Set your desired color */
+  border-top: #cc00ff 10px solid;
+  border-bottom: #cc00ff 10px solid;
+  transform: rotate(0deg);
+}
+#styles .container ul.features li:nth-child(1):hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+#styles .container ul.features li:nth-child(1) span {
+  transform: rotate(0deg);
+}
+#styles .container ul.features li:nth-child(2) {
+  background-color: #cc00ff;
+  /* Set your desired color */
+  border-top: #9000ff 10px solid;
+  border-bottom: #9000ff 10px solid;
+  transform: rotate(0deg);
+  display: flex;
+  flex-direction: column;
+  transform: rotate(0deg);
+}
+#styles .container ul.features li:nth-child(2):hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+#styles .container ul.features li:nth-child(2) span {
+  transform: rotate(0deg);
+}
+#styles .container ul.features li:nth-child(3) {
+  background-color: #9000ff;
+  /* Set your desired color */
+  border-top: #cc00ff 10px solid;
+  border-bottom: #cc00ff 10px solid;
+  transform: rotate(0deg);
+}
+#styles .container ul.features li:nth-child(3):hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+#styles .container ul.features li:nth-child(3) span {
+  transform: rotate(0deg);
+}
+#styles .container ul.features li a {
+  text-decoration: none;
+  color: inherit;
+}
+#styles .container ul.features li a:hover {
+  text-decoration: underline;
+}
+#styles .container ul.features li span {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 14px;
+  color: #c4b9b6ff;
+  /* Set your desired color */
+}
+#styles .container .link-allstyles {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #c4b9b6ff;
+  /* Set your desired color */
+}
+#styles .container .link-allstyles:hover {
+  text-decoration: underline;
 }
 
 .page-footer {

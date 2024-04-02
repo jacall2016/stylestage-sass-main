@@ -3,9 +3,114 @@
     
 }
 
-.container{
+#styles {
+    .container {
+      max-width: 400px; /* Set maximum width */
+      margin: 0 auto; /* Center the container horizontally */
+  
+      ul.features {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center; /* Center the grid horizontally */
+        align-items: center; /* Center the grid vertically */
+        list-style: none;
+        padding: 0;
+        margin: 20px;
+  
+        li {
+          width: 300px;
+          height: 300px;
+          border-radius: 50% 0 50% 0;
+          margin: 0px;
+          display: flex; /* Use flexbox to center contents */
+          justify-content: center; /* Center contents horizontally */
+          align-items: center; /* Center contents vertically */
+          position: relative;
+          margin-right: -80px;
+  
+          &:nth-child(1) {
+            background-color: $color-background2; /* Set your desired color */
+            border-top: $color-primary-alt2 10px solid;
+            border-bottom: $color-primary-alt2 10px solid;
+            transform: rotate(0deg);
 
-}
+            &:hover {
+                transform: scale(1.1);
+                transition: transform 0.3s ease-in-out;
+              }
+  
+            span {
+              transform: rotate(0deg);
+            }
+          }
+  
+          &:nth-child(2) {
+            background-color: $color-primary-alt2; /* Set your desired color */
+            border-top: $color-background2 10px solid;
+            border-bottom: $color-background2 10px solid;
+            transform: rotate(0deg);
+            display: flex;
+            flex-direction: column;
+            transform: rotate(0deg);
+
+            &:hover {
+                transform: scale(1.2);
+                transition: transform 0.3s ease-in-out;
+              }
+  
+            span {
+              transform: rotate(0deg);
+            }
+          }
+  
+          &:nth-child(3) {
+            background-color: $color-background2; /* Set your desired color */
+            border-top: $color-primary-alt2 10px solid;
+            border-bottom: $color-primary-alt2 10px solid;
+            transform: rotate(0deg);
+
+            &:hover {
+                transform: scale(1.2);
+                transition: transform 0.3s ease-in-out;
+              }
+  
+            span {
+              transform: rotate(0deg);
+            }
+          }
+  
+          a {
+            text-decoration: none;
+            color: inherit;
+  
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+  
+          span {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-size: 14px;
+            color: $color-primary; /* Set your desired color */
+          }
+        }
+      }
+  
+      .link-allstyles {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        color: $color-primary; /* Set your desired color */
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
 
 .features {
     
