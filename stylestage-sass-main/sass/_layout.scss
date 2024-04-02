@@ -1,11 +1,27 @@
+/* Apply the background image to the body */
 body {
-  color: var(--color-text);
-  font-family: var(--font-family);
+  position: relative; /* Make the body a positioning context */
+}
+
+/* Create a pseudo-element to simulate the background image */
+body::before {
+  content: ""; /* Required for pseudo-elements */
+  position: fixed; /* Fix the pseudo-element to the viewport */
+  top: 0;
+  left: 0;
+  width: 100%; /* Cover the entire viewport */
+  height: 100%;
+  z-index: -1; /* Move the pseudo-element behind other content */
   background-image: url("/stylestage-sass-main/public/images/render1.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed; /* Keep background stationary */
-  overflow: hidden; /* Hide the scrollbar for all directions */
+  opacity: 0.5; /* Adjust the opacity as needed */
+}
+
+/* Adjust padding as needed */
+.page-content {
+  padding: 20px;
+  z-index: 1; /* Ensure content is above the pseudo-element */
 }
 
 .profile {
