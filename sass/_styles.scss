@@ -81,11 +81,6 @@
         margin-top: 20px;
         color: $color-primary;
         text-shadow: 3px 3px 0px $color-background;
-        transition: color 0.3s ease;
-        &:hover {
-          color: $color-primary-alt;
-          text-shadow: 2px 2px 0px $color-background;
-        }
       }
     }
   }
