@@ -24,23 +24,6 @@ body::before {
   z-index: 1; /* Ensure content is above the pseudo-element */
 }
 
-.profile {
-
-}
-
-.profile-title {
-
-}
-
-.profile-author {
-}
-
-.profile-twitter {
-}
-
-.profile-website {
-}
-
 .features {
 
 }
@@ -48,19 +31,13 @@ body::before {
 #main {
 }
 
-#guidelines{
-
-}
-
-#contribute {
-}
-
-#profile-title{
-
-}
-
-#styles {
-
+#guidelines .container{
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center; /* Center the grid horizontally */
+  align-items: center; /* Center the grid vertically */
+ 
 }
 
 .container {
@@ -70,8 +47,177 @@ body::before {
 article {
   display: block;
   color: lightgrey;
-  background-color: rgba(23, 23, 23, 0.65);
+  background-color: $transparent;
   text-align: center;
   padding: 20px;
   border-radius: 25px;
 }
+
+#contribute {
+  margin-top: 50px;
+  
+  
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      text-align: center;
+      width: 40ch;
+      margin-top:10px;
+    }
+
+  }
+
+  .container:nth-child(1) {
+    order: 1;
+  }
+
+  .container:nth-child(2) {
+    order: 2;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    h3 {
+      margin-top: 50px;
+      margin-right: 50px;
+      width: 400px;
+      height: 300px;
+      border-radius: 50%;
+      box-shadow: 20px -20px 0 0 $color-primary;
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      //color: $color-background;
+    }
+
+    h3::before,
+    h3::after {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 300px;
+      background-color: $color-primary; /* Change this to your desired color */
+      z-index: -1;
+      transform: rotate(45deg);
+    }
+
+    ol {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      padding: 0;
+  
+      li {
+        position: absolute;
+        background-color: $color-primary;
+        border-radius: 0 100px 100px 0;
+        color: $color-primary;
+        width: 50px;
+        height: 50px;
+        text-align: left;
+        box-shadow: 5px 5px 10px 1px $color-background;
+        padding: 30px;
+        padding-left: 60px;
+        margin-left:-50px;
+        overflow: hidden;
+
+        &:nth-child(1) {
+          transform: translateY(100px);
+        }
+        &:nth-child(2) {
+          transform: translateY(50px);
+        }
+        &:nth-child(3) {
+          transform: translateY(0px);
+        }
+        &:nth-child(4) {
+          transform: translateY(-50px);
+        }
+
+        a {color: $color-primary;}
+          transition: height 0.5s ease-in-out, width 0.2s ease-in-out, background-color 0.5s ease-in-out;
+          &:hover {
+            //transform: translateY(-100px);
+            height: 150px;
+            width: 65%;
+            z-index: 50;
+            color: $color-background;
+          }
+          &:hover a {
+            color: $color-secondary;
+          }
+      }
+    }
+  }
+
+  footer:nth-child(3) {
+    margin-top: 250px;
+    z-index: 50;
+    order: 3; /* Third column remains third */
+    .container {
+      transform: translateY(-100px);
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 0px;
+
+      h3 {
+        background-image: url("/images/Ice_Block.png");
+        margin: 10px;
+        width:$block_size;
+        height: $block_size;
+        background-size: contain;
+        color: $color-background;
+        text-shadow: 1px 1px 1px $color-background;
+        transition: transform 0.3s ease-in-out;
+          &:hover {
+            color: $color-secondary;
+            transform: scale(1.1);
+          }
+      }
+
+      a {
+        background-image: url("/images/Desert_Block.png");
+        width:$block_size;
+        height: $block_size;
+        margin: 10px;
+        background-size: contain;
+        box-shadow: 5px 5px 5px 0px $color-background;
+        text-shadow: 1px 1px 1px $color-background;
+        color: $color-background;
+        transition: transform 0.3s ease-in-out;
+          &:hover {
+            color: $color-secondary;
+            transform: scale(1.1);
+          }
+
+        &:nth-child(2) {
+          background-image: url("/images/Water_Block.png");
+          color: $color-primary;
+          transition: transform 0.3s ease-in-out;
+          &:hover {
+            color: $color-primary-alt;
+            transform: scale(1.1);
+          }
+        }
+
+        &:nth-child(3) {
+          background-image: url("/images/Green_Block.png");
+          color: $color-primary;
+          transition: transform 0.3s ease-in-out;
+          &:hover {
+            color: $color-primary-alt;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,13 +1,36 @@
 .profile {
   padding: 20px; /* Add padding */
   border-radius: 10px; /* Add border radius */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
   
+  .container > :last-child {
+    display: none;
+  }
+
   .container {
-    max-width: 400px; /* Set maximum width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto; /* Center the container horizontally */
+    background-color: $transparent;
+    border-radius: 25px;
+    #profile-title {
+      text-align: center;
+      margin-top: 50px;
+      color: $color-primary;
+      font-size: $font-size-h2*1.25;
+      font-family: 'minecraft-title', sans-serif;
+      text-shadow: 2px 2px 0px $color-background;
+    }
   
     ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 640px;
+      padding: 20px;
+      margin-top: 50px;
+      margin-bottom: 50px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       justify-content: center; /* Center the grid horizontally */
@@ -21,20 +44,19 @@
         display: flex; /* Use flexbox to center contents */
         justify-content: center; /* Center contents horizontally */
         align-items: center; /* Center contents vertically */
-        
+
         &:nth-child(1) {
           background-color: $color-primary-alt; /* Set your desired color */
           border-top: $color-secondary 5px solid;
           border-right: $color-secondary 5px solid;
           transform: rotate(-90deg);
-
+          transition: transform 0.5s ease-in-out;
           &:hover {
             z-index: 1;
             transform: scale(1.2) rotate(90deg);
             transition: transform 0.5s ease-in-out;
             span {
               transform: rotate(-90deg);
-              transition: transform 0.5s ease-in-out;
             }
           }
 
@@ -49,13 +71,12 @@
           border-right: $color-primary-alt 5px solid;
           display: flex;
           flex-direction: column;
-
+          transition: transform 0.5s ease-in-out;
           &:hover {
             z-index: 1;
             transform: scale(1.2) rotate(180deg);
             transition: transform 0.5s ease-in-out;
             span {
-              transition: transform 0.5s ease-in-out;
               transform: rotate(-180deg);
             }
           }
@@ -66,13 +87,12 @@
           border-top: $color-primary-alt 5px solid;
           border-right: $color-primary-alt 5px solid;
           transform: rotate(-180deg);
-
+          transition: transform 0.5s ease-in-out;
           &:hover {
             z-index: 1;
             transform: scale(1.2) rotate(-360deg);
             transition: transform 0.5s ease-in-out;
             span {
-              transition: transform 0.5s ease-in-out;
               transform: rotate(0deg);
             }
           }
@@ -87,13 +107,12 @@
           border-top: $color-secondary 5px solid;
           border-right: $color-secondary 5px solid;
           transform: rotate(90deg);
-
+          transition: transform 0.5s ease-in-out;
           &:hover {
             z-index: 1;
             transform: scale(1.2) rotate(270deg);
             transition: transform 0.5s ease-in-out;
             span {
-              transition: transform 0.5s ease-in-out;
               transform: rotate(90deg);
             }
           }

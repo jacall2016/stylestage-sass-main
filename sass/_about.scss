@@ -1,3 +1,187 @@
 #about {
-    
+    .container {
+        &:nth-child(2) {
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: center; /* Center horizontally */
+                height: 1000px;
+                align-items: center; /* Center vertically */
+                background-color: rgba(135, 207, 235, 0.75);
+                margin: 40px;
+                box-shadow: 0px 0px 60px 100px rgba(135, 207, 235, 0.75); /* Outer border */
+                li {
+                    position: absolute;
+                    background-image: url("/images/Leaves_Block.png");
+                    width: $block_size;
+                    height: $block_size;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    text-overflow: wrap;
+                    overflow: hidden;
+                    text-align: center;
+                    padding: 10px;
+                    font-size: $font-size-text*1.1;
+                    font-family: 'minecraft-title', sans-serif;
+                    text-shadow: 2px 2px 0px $color-background;
+                    &:nth-child(1) {
+                        transform: translateY($block_size * -3);
+                        transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+                        &:hover {
+                            z-index: 50;
+                            transform: scale(1.1) translateY($block_size * -2.75);
+                            background-image: url("/images/Empty_Block.png");
+                        }
+                    }
+                    &:nth-child(2) {
+                        transform: translateY($block_size * -2) translateX(0px);
+                        transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+                        &:hover {
+                            z-index: 50;
+                            transform: scale(1.1) translateY($block_size * -1.75);
+                            background-image: url("/images/Empty_Block.png");
+                        }
+                    }
+                    &:nth-child(3) {
+                        transform: translateY($block_size * -2) translateX($block_size);
+                        transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+                        &:hover {
+                            z-index: 50;
+                            transform: scale(1.1) translateY($block_size * -1.75) translateX($block_size);
+                            background-image: url("/images/Empty_Block.png");
+                        }
+                    }
+                    &:nth-child(4) {
+                        transform: translateY($block_size * -2) translateX($block_size * -1);
+                        transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+                        &:hover {
+                            z-index: 50;
+                            transform: scale(1.1) translateY($block_size * -1.75) translateX($block_size * -1);
+                            background-image: url("/images/Empty_Block.png");
+                        }
+                    }
+                    &:nth-child(5) {
+                        transform: translateY($block_size * -1);
+                        transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+                        &:hover {
+                            z-index: 50;
+                            transform: scale(1.1) translateY($block_size * -1);
+                            background-image: url("/images/Empty_Block.png");
+                        }
+                    }
+                    &:nth-child(6) {
+                        transform: translateY($block_size * -1) translateX($block_size);
+                        transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+                        &:hover {
+                            z-index: 50;
+                            transform: scale(1.1) translateY($block_size * -1) translateX($block_size);
+                            background-image: url("/images/Empty_Block.png");
+                        }
+                    }
+                    &:nth-child(7) {
+                        transform: translateY($block_size * -1) translateX($block_size * -1);
+                        transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+                        &:hover {
+                            z-index: 50;
+                            transform: scale(1.1) translateY($block_size * -1) translateX($block_size * -1);
+                            background-image: url("/images/Empty_Block.png");
+                        }
+                    }
+                    &:nth-child(8) {
+                        transform: translateY($block_size * -1) translateX($block_size * -2);
+                        transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+                        &:hover {
+                            z-index: 50;
+                            transform: scale(1.1) translateY($block_size * -1) translateX($block_size * -2);
+                            background-image: url("/images/Empty_Block.png");
+                        }
+                    }
+                    &:nth-child(9) {
+                        transform: translateY($block_size * -1) translateX($block_size * 2);
+                        transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+                        &:hover {
+                            z-index: 50;
+                            transform: scale(1.1) translateY($block_size * -1) translateX($block_size * 2);
+                            background-image: url("/images/Empty_Block.png");
+                        }
+                    }
+                    &:nth-child(10) {
+                        transform: translateY(0px) translateX(0px);
+                        transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+                        &:hover {
+                            z-index: 50;
+                            transform: scale(1.1) translateY(0px) translateX(0px);
+                            background-image: url("/images/Empty_Block.png");
+                        }
+                    }
+                    &:nth-child(11) {
+                        transform: translateY(0px) translateX($block_size);
+                        transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+                        &:hover {
+                            z-index: 50;
+                            transform: scale(1.1) translateY(0px) translateX($block_size);
+                            background-image: url("/images/Empty_Block.png");
+                        }
+                    }
+                    &:nth-child(12) {
+                        transform: translateY(0px) translateX($block_size * -1);
+                        transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+                        &:hover {
+                            z-index: 50;
+                            transform: scale(1.1) translateY(0px) translateX($block_size * -1);
+                            background-image: url("/images/Empty_Block.png");
+                        }
+                    }
+                    &:nth-child(13) {
+                        transform: translateY(0px) translateX($block_size * -2);
+                        transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+                        &:hover {
+                            z-index: 50;
+                            transform: scale(1.1) translateY(0px) translateX($block_size * -2);
+                            background-image: url("/images/Empty_Block.png");
+                        }
+                    }
+                    &:nth-child(14) {
+                        transform: translateY(0) translateX($block_size * 2);
+                        transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+                        &:hover {
+                            z-index: 50;
+                            transform: scale(1.1) translateY(0px) translateX($block_size * 2);
+                            background-image: url("/images/Empty_Block.png");
+                        }
+                    }
+                    &:nth-child(15) {
+                        transform: translateY($block_size * 1) translateX(0px);
+                        background-image: url("/images/Wood_Block.png");
+                        transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+                        &:hover {
+                            z-index: 50;
+                            transform: scale(1.1) translateY($block_size * .9) translateX(0px);
+                            background-image: url("/images/Empty_Block.png");
+                        }
+                    }
+                    &:nth-child(16) {
+                        transform: translateY($block_size * 2) translateX(0px);
+                        background-image: url("/images/Wood_Block.png");
+                        transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+                        &:hover {
+                            z-index: 50;
+                            transform: scale(1.1) translateY($block_size * 1.8) translateX(0px);
+                            background-image: url("/images/Empty_Block.png");
+                        }
+                    }
+                    &:nth-child(17) {
+                        transform: translateY($block_size * 3) translateX(0px);
+                        background-image: url("/images/Wood_Block.png");
+                        transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+                        &:hover {
+                            z-index: 50;
+                            transform: scale(1.1) translateY($block_size * 2.8) translateX(0px);
+                            background-image: url("/images/Empty_Block.png");
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

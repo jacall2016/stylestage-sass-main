@@ -101,67 +101,41 @@ header .container .link-github svg {
   margin-right: 10px;
 }
 
-/* Apply the background image to the body */
-body {
-  position: relative;
-  /* Make the body a positioning context */
-}
-
-/* Create a pseudo-element to simulate the background image */
-body::before {
-  content: "";
-  /* Required for pseudo-elements */
-  position: fixed;
-  /* Fix the pseudo-element to the viewport */
-  top: 0;
-  left: 0;
-  width: 100%;
-  /* Cover the entire viewport */
-  height: 100%;
-  z-index: -1;
-  /* Move the pseudo-element behind other content */
-  background-image: url("/images/render1.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.8;
-  /* Adjust the opacity as needed */
-}
-
-/* Adjust padding as needed */
-.page-content {
-  padding: 20px;
-  z-index: 1;
-  /* Ensure content is above the pseudo-element */
-}
-
-.container {
-  display: block;
-}
-
-article {
-  display: block;
-  color: lightgrey;
-  background-color: rgba(23, 23, 23, 0.65);
-  text-align: center;
-  padding: 20px;
-  border-radius: 25px;
-}
-
 .profile {
   padding: 20px;
   /* Add padding */
   border-radius: 10px;
   /* Add border radius */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* Add box shadow for depth */
+}
+.profile .container > :last-child {
+  display: none;
 }
 .profile .container {
-  max-width: 400px;
-  /* Set maximum width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
   /* Center the container horizontally */
+  background-color: rgba(23, 23, 23, 0.65);
+  border-radius: 25px;
+}
+.profile .container #profile-title {
+  text-align: center;
+  margin-top: 50px;
+  color: #c4b9b6ff;
+  font-size: 2.5rem;
+  font-family: "minecraft-title", sans-serif;
+  text-shadow: 2px 2px 0px #262522;
 }
 .profile .container ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 640px;
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
@@ -187,6 +161,7 @@ article {
   border-top: #457520ff 5px solid;
   border-right: #457520ff 5px solid;
   transform: rotate(-90deg);
+  transition: transform 0.5s ease-in-out;
 }
 .profile .container ul li:nth-child(1):hover {
   z-index: 1;
@@ -195,7 +170,6 @@ article {
 }
 .profile .container ul li:nth-child(1):hover span {
   transform: rotate(-90deg);
-  transition: transform 0.5s ease-in-out;
 }
 .profile .container ul li:nth-child(1) span {
   transform: rotate(90deg);
@@ -207,6 +181,7 @@ article {
   border-right: #8fca5cff 5px solid;
   display: flex;
   flex-direction: column;
+  transition: transform 0.5s ease-in-out;
 }
 .profile .container ul li:nth-child(2):hover {
   z-index: 1;
@@ -214,7 +189,6 @@ article {
   transition: transform 0.5s ease-in-out;
 }
 .profile .container ul li:nth-child(2):hover span {
-  transition: transform 0.5s ease-in-out;
   transform: rotate(-180deg);
 }
 .profile .container ul li:nth-child(3) {
@@ -223,6 +197,7 @@ article {
   border-top: #8fca5cff 5px solid;
   border-right: #8fca5cff 5px solid;
   transform: rotate(-180deg);
+  transition: transform 0.5s ease-in-out;
 }
 .profile .container ul li:nth-child(3):hover {
   z-index: 1;
@@ -230,7 +205,6 @@ article {
   transition: transform 0.5s ease-in-out;
 }
 .profile .container ul li:nth-child(3):hover span {
-  transition: transform 0.5s ease-in-out;
   transform: rotate(0deg);
 }
 .profile .container ul li:nth-child(3) span {
@@ -242,6 +216,7 @@ article {
   border-top: #457520ff 5px solid;
   border-right: #457520ff 5px solid;
   transform: rotate(90deg);
+  transition: transform 0.5s ease-in-out;
 }
 .profile .container ul li:nth-child(4):hover {
   z-index: 1;
@@ -249,7 +224,6 @@ article {
   transition: transform 0.5s ease-in-out;
 }
 .profile .container ul li:nth-child(4):hover span {
-  transition: transform 0.5s ease-in-out;
   transform: rotate(90deg);
 }
 .profile .container ul li:nth-child(4) span {
@@ -328,14 +302,22 @@ article {
 }
 
 #styles .container {
-  max-width: 400px;
-  /* Set maximum width */
   margin: 0 auto;
   /* Center the container horizontally */
+  background-color: rgba(23, 23, 23, 0.65);
+  border-radius: 25px;
+}
+#styles .container h2 {
+  padding-top: 50px;
+  z-index: 50;
+  text-align: center;
+  color: #262522;
+  color: #c4b9b6ff;
+  text-shadow: 2px 2px 0px #262522;
 }
 #styles .container ul.features {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  display: flex;
   justify-content: center;
   /* Center the grid horizontally */
   align-items: center;
@@ -343,90 +325,63 @@ article {
   list-style: none;
   padding: 0;
   margin: 20px;
+  margin-top: 200px;
+  height: 400px;
 }
 #styles .container ul.features li {
+  position: absolute;
   width: 300px;
   height: 300px;
   border-radius: 50% 0 50% 0;
   margin: 0px;
   display: flex;
   /* Use flexbox to center contents */
-  justify-content: center;
-  /* Center contents horizontally */
-  align-items: center;
-  /* Center contents vertically */
-  position: relative;
   margin-right: -80px;
 }
+#styles .container ul.features li span {
+  display: none;
+}
 #styles .container ul.features li:nth-child(1) {
-  background-color: #9000ff;
+  z-index: 1;
+  background-color: #2d0f5a;
   /* Set your desired color */
-  border-top: #cc00ff 10px solid;
-  border-bottom: #cc00ff 10px solid;
-  transform: rotate(0deg);
+  border-top: #004cd8 10px solid;
+  border-right: #004cd8 10px solid;
+  transform: translateX(30px);
+  transition: transform 0.3s ease-in-out;
 }
 #styles .container ul.features li:nth-child(1):hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease-in-out;
-}
-#styles .container ul.features li:nth-child(1) span {
-  transform: rotate(0deg);
+  transform: rotate(45deg) translateX(90px);
 }
 #styles .container ul.features li:nth-child(2) {
-  background-color: #cc00ff;
-  /* Set your desired color */
-  border-top: #9000ff 10px solid;
-  border-bottom: #9000ff 10px solid;
-  transform: rotate(0deg);
-  display: flex;
-  flex-direction: column;
-  transform: rotate(0deg);
-}
-#styles .container ul.features li:nth-child(2):hover {
-  transform: scale(1.2);
-  transition: transform 0.3s ease-in-out;
-}
-#styles .container ul.features li:nth-child(2) span {
-  transform: rotate(0deg);
+  background-color: #004cd8;
+  border-top: #2d0f5a 10px solid;
+  border-right: #2d0f5a 10px solid;
+  transform: rotate(-45deg) translateY(-70px) translateX(30px);
 }
 #styles .container ul.features li:nth-child(3) {
-  background-color: #9000ff;
-  /* Set your desired color */
-  border-top: #cc00ff 10px solid;
-  border-bottom: #cc00ff 10px solid;
-  transform: rotate(0deg);
-}
-#styles .container ul.features li:nth-child(3):hover {
-  transform: scale(1.2);
-  transition: transform 0.3s ease-in-out;
-}
-#styles .container ul.features li:nth-child(3) span {
-  transform: rotate(0deg);
-}
-#styles .container ul.features li a {
-  text-decoration: none;
-  color: inherit;
-}
-#styles .container ul.features li a:hover {
-  text-decoration: underline;
-}
-#styles .container ul.features li span {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  font-size: 14px;
-  color: #c4b9b6ff;
-  /* Set your desired color */
+  background-color: #2d0f5a;
+  border-top: #004cd8 10px solid;
+  border-right: #004cd8 10px solid;
+  transform: translateX(-100px) rotate(-90deg);
 }
 #styles .container .link-allstyles {
+  z-index: 50;
+  color: #c4b9b6ff;
+  position: relative;
+  transform: translateY(-200px);
+  font-size: 1.5rem;
+  text-decoration: none;
   display: block;
   text-align: center;
   margin-top: 20px;
   color: #c4b9b6ff;
-  /* Set your desired color */
+  text-shadow: 3px 3px 0px #262522;
+  transition: color 0.3s ease;
 }
 #styles .container .link-allstyles:hover {
-  text-decoration: underline;
+  color: #8fca5cff;
+  text-shadow: 2px 2px 0px #262522;
 }
 
 .page-footer {
@@ -454,27 +409,55 @@ article {
   /* Use flexbox to control layout */
   flex-direction: column;
   /* Align content vertically */
-  margin-top: 100px;
+  margin-top: 150px;
 }
 .page-footer .container p {
-  width: 100%;
+  width: 400px;
   margin: 0 auto;
   /* Center the paragraph horizontally */
   border: 5px solid #262522;
   background-color: #c4b9b6ff;
   padding: 10px;
-  border-radius: 50px 50px 0 0;
   height: 200px;
-  margin-top: -100px;
   transition: transform 0.3s ease;
   /* Add transition for hover effect */
   transform-origin: center bottom;
   /* Set scaling origin */
 }
-.page-footer .container p:hover {
-  transform: scale(1.1);
+.page-footer .container p:nth-child(1) {
+  margin-top: -75px;
+  border-radius: 50px 50px 0 50px;
+  transform: translateX(100px);
+  transition: transform 0.3s ease-in-out;
+}
+.page-footer .container p:nth-child(1):hover {
+  z-index: 1;
+  transform: scale(1.1) translateX(125px);
+}
+.page-footer .container p:nth-child(3) {
+  margin-top: -75px;
+  border-radius: 50px 50px 0 50px;
+  transform: translateX(100px);
+  transition: transform 0.3s ease-in-out;
+}
+.page-footer .container p:nth-child(3):hover {
+  z-index: 1;
+  transform: scale(1.1) translateX(125px);
+}
+.page-footer .container p:nth-child(4) {
+  margin-top: -100px;
+  border-radius: 50px 50px 50px 0;
+  transform: translateX(-100px);
+  transition: transform 0.3s ease-in-out;
+}
+.page-footer .container p:nth-child(4):hover {
+  z-index: 1;
+  transform: scale(1.1) translateX(-125px);
 }
 .page-footer .container ul {
+  transform: translateX(-100px);
+  width: 400px;
+  margin-right: 700px;
   margin: 0 auto;
   /* Center the paragraph horizontally */
   margin-top: -100px;
@@ -482,9 +465,10 @@ article {
   list-style-type: none;
   background-color: #c4b9b6ff;
   padding: 10px;
-  border-radius: 50px 50px 0 0;
+  border-radius: 50px 50px 50px 0;
   height: 200px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
   /* Center the list items horizontally */
   flex-wrap: wrap;
@@ -492,12 +476,11 @@ article {
   /* Add transition for hover effect */
   transform-origin: center bottom;
   /* Set scaling origin */
+  transition: transform 0.3s ease-in-out;
 }
 .page-footer .container ul:hover {
-  transform: scale(1.1);
-}
-.page-footer .container li {
-  margin-right: 10px;
+  z-index: 1;
+  transform: scale(1.1) translateX(-125px);
 }
 .page-footer .container a {
   color: #457520ff;
@@ -558,4 +541,399 @@ a {
 
 .link-github {
   color: #262522;
+}
+
+/* Apply the background image to the body */
+body {
+  position: relative;
+  /* Make the body a positioning context */
+}
+
+/* Create a pseudo-element to simulate the background image */
+body::before {
+  content: "";
+  /* Required for pseudo-elements */
+  position: fixed;
+  /* Fix the pseudo-element to the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Cover the entire viewport */
+  height: 100%;
+  z-index: -1;
+  /* Move the pseudo-element behind other content */
+  background-image: url("/images/render1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  /* Adjust the opacity as needed */
+}
+
+/* Adjust padding as needed */
+.page-content {
+  padding: 20px;
+  z-index: 1;
+  /* Ensure content is above the pseudo-element */
+}
+
+#guidelines .container {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  /* Center the grid horizontally */
+  align-items: center;
+  /* Center the grid vertically */
+}
+
+.container {
+  display: block;
+}
+
+article {
+  display: block;
+  color: lightgrey;
+  background-color: rgba(23, 23, 23, 0.65);
+  text-align: center;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+#contribute {
+  margin-top: 50px;
+}
+#contribute .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#contribute .container p {
+  text-align: center;
+  width: 40ch;
+  margin-top: 10px;
+}
+#contribute .container:nth-child(1) {
+  order: 1;
+}
+#contribute .container:nth-child(2) {
+  order: 2;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+#contribute .container:nth-child(2) h3 {
+  margin-top: 50px;
+  margin-right: 50px;
+  width: 400px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 20px -20px 0 0 #c4b9b6ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contribute .container:nth-child(2) h3::before,
+#contribute .container:nth-child(2) h3::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 300px;
+  background-color: #c4b9b6ff;
+  /* Change this to your desired color */
+  z-index: -1;
+  transform: rotate(45deg);
+}
+#contribute .container:nth-child(2) ol {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  padding: 0;
+}
+#contribute .container:nth-child(2) ol li {
+  position: absolute;
+  background-color: #c4b9b6ff;
+  border-radius: 0 100px 100px 0;
+  color: #c4b9b6ff;
+  width: 50px;
+  height: 50px;
+  text-align: left;
+  box-shadow: 5px 5px 10px 1px #262522;
+  padding: 30px;
+  padding-left: 60px;
+  margin-left: -50px;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out, width 0.2s ease-in-out, background-color 0.5s ease-in-out;
+}
+#contribute .container:nth-child(2) ol li:nth-child(1) {
+  transform: translateY(100px);
+}
+#contribute .container:nth-child(2) ol li:nth-child(2) {
+  transform: translateY(50px);
+}
+#contribute .container:nth-child(2) ol li:nth-child(3) {
+  transform: translateY(0px);
+}
+#contribute .container:nth-child(2) ol li:nth-child(4) {
+  transform: translateY(-50px);
+}
+#contribute .container:nth-child(2) ol li a {
+  color: #c4b9b6ff;
+}
+#contribute .container:nth-child(2) ol li:hover {
+  height: 150px;
+  width: 65%;
+  z-index: 50;
+  color: #262522;
+}
+#contribute .container:nth-child(2) ol li:hover a {
+  color: #457520ff;
+}
+#contribute footer:nth-child(3) {
+  margin-top: 250px;
+  z-index: 50;
+  order: 3;
+  /* Third column remains third */
+}
+#contribute footer:nth-child(3) .container {
+  transform: translateY(-100px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 0px;
+}
+#contribute footer:nth-child(3) .container h3 {
+  background-image: url("/images/Ice_Block.png");
+  margin: 10px;
+  width: 125px;
+  height: 125px;
+  background-size: contain;
+  color: #262522;
+  text-shadow: 1px 1px 1px #262522;
+  transition: transform 0.3s ease-in-out;
+}
+#contribute footer:nth-child(3) .container h3:hover {
+  color: #457520ff;
+  transform: scale(1.1);
+}
+#contribute footer:nth-child(3) .container a {
+  background-image: url("/images/Desert_Block.png");
+  width: 125px;
+  height: 125px;
+  margin: 10px;
+  background-size: contain;
+  box-shadow: 5px 5px 5px 0px #262522;
+  text-shadow: 1px 1px 1px #262522;
+  color: #262522;
+  transition: transform 0.3s ease-in-out;
+}
+#contribute footer:nth-child(3) .container a:hover {
+  color: #457520ff;
+  transform: scale(1.1);
+}
+#contribute footer:nth-child(3) .container a:nth-child(2) {
+  background-image: url("/images/Water_Block.png");
+  color: #c4b9b6ff;
+  transition: transform 0.3s ease-in-out;
+}
+#contribute footer:nth-child(3) .container a:nth-child(2):hover {
+  color: #8fca5cff;
+  transform: scale(1.1);
+}
+#contribute footer:nth-child(3) .container a:nth-child(3) {
+  background-image: url("/images/Green_Block.png");
+  color: #c4b9b6ff;
+  transition: transform 0.3s ease-in-out;
+}
+#contribute footer:nth-child(3) .container a:nth-child(3):hover {
+  color: #8fca5cff;
+  transform: scale(1.1);
+}
+
+#about .container:nth-child(2) ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Center horizontally */
+  height: 1000px;
+  align-items: center;
+  /* Center vertically */
+  background-color: rgba(135, 207, 235, 0.75);
+  margin: 40px;
+  box-shadow: 0px 0px 60px 100px rgba(135, 207, 235, 0.75);
+  /* Outer border */
+}
+#about .container:nth-child(2) ul li {
+  position: absolute;
+  background-image: url("/images/Leaves_Block.png");
+  width: 125px;
+  height: 125px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-overflow: wrap;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.1rem;
+  font-family: "minecraft-title", sans-serif;
+  text-shadow: 2px 2px 0px #262522;
+}
+#about .container:nth-child(2) ul li:nth-child(1) {
+  transform: translateY(-375px);
+  transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+}
+#about .container:nth-child(2) ul li:nth-child(1):hover {
+  z-index: 50;
+  transform: scale(1.1) translateY(-343.75px);
+  background-image: url("/images/Empty_Block.png");
+}
+#about .container:nth-child(2) ul li:nth-child(2) {
+  transform: translateY(-250px) translateX(0px);
+  transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+}
+#about .container:nth-child(2) ul li:nth-child(2):hover {
+  z-index: 50;
+  transform: scale(1.1) translateY(-218.75px);
+  background-image: url("/images/Empty_Block.png");
+}
+#about .container:nth-child(2) ul li:nth-child(3) {
+  transform: translateY(-250px) translateX(125px);
+  transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+}
+#about .container:nth-child(2) ul li:nth-child(3):hover {
+  z-index: 50;
+  transform: scale(1.1) translateY(-218.75px) translateX(125px);
+  background-image: url("/images/Empty_Block.png");
+}
+#about .container:nth-child(2) ul li:nth-child(4) {
+  transform: translateY(-250px) translateX(-125px);
+  transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+}
+#about .container:nth-child(2) ul li:nth-child(4):hover {
+  z-index: 50;
+  transform: scale(1.1) translateY(-218.75px) translateX(-125px);
+  background-image: url("/images/Empty_Block.png");
+}
+#about .container:nth-child(2) ul li:nth-child(5) {
+  transform: translateY(-125px);
+  transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+}
+#about .container:nth-child(2) ul li:nth-child(5):hover {
+  z-index: 50;
+  transform: scale(1.1) translateY(-125px);
+  background-image: url("/images/Empty_Block.png");
+}
+#about .container:nth-child(2) ul li:nth-child(6) {
+  transform: translateY(-125px) translateX(125px);
+  transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+}
+#about .container:nth-child(2) ul li:nth-child(6):hover {
+  z-index: 50;
+  transform: scale(1.1) translateY(-125px) translateX(125px);
+  background-image: url("/images/Empty_Block.png");
+}
+#about .container:nth-child(2) ul li:nth-child(7) {
+  transform: translateY(-125px) translateX(-125px);
+  transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+}
+#about .container:nth-child(2) ul li:nth-child(7):hover {
+  z-index: 50;
+  transform: scale(1.1) translateY(-125px) translateX(-125px);
+  background-image: url("/images/Empty_Block.png");
+}
+#about .container:nth-child(2) ul li:nth-child(8) {
+  transform: translateY(-125px) translateX(-250px);
+  transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+}
+#about .container:nth-child(2) ul li:nth-child(8):hover {
+  z-index: 50;
+  transform: scale(1.1) translateY(-125px) translateX(-250px);
+  background-image: url("/images/Empty_Block.png");
+}
+#about .container:nth-child(2) ul li:nth-child(9) {
+  transform: translateY(-125px) translateX(250px);
+  transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+}
+#about .container:nth-child(2) ul li:nth-child(9):hover {
+  z-index: 50;
+  transform: scale(1.1) translateY(-125px) translateX(250px);
+  background-image: url("/images/Empty_Block.png");
+}
+#about .container:nth-child(2) ul li:nth-child(10) {
+  transform: translateY(0px) translateX(0px);
+  transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+}
+#about .container:nth-child(2) ul li:nth-child(10):hover {
+  z-index: 50;
+  transform: scale(1.1) translateY(0px) translateX(0px);
+  background-image: url("/images/Empty_Block.png");
+}
+#about .container:nth-child(2) ul li:nth-child(11) {
+  transform: translateY(0px) translateX(125px);
+  transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+}
+#about .container:nth-child(2) ul li:nth-child(11):hover {
+  z-index: 50;
+  transform: scale(1.1) translateY(0px) translateX(125px);
+  background-image: url("/images/Empty_Block.png");
+}
+#about .container:nth-child(2) ul li:nth-child(12) {
+  transform: translateY(0px) translateX(-125px);
+  transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+}
+#about .container:nth-child(2) ul li:nth-child(12):hover {
+  z-index: 50;
+  transform: scale(1.1) translateY(0px) translateX(-125px);
+  background-image: url("/images/Empty_Block.png");
+}
+#about .container:nth-child(2) ul li:nth-child(13) {
+  transform: translateY(0px) translateX(-250px);
+  transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+}
+#about .container:nth-child(2) ul li:nth-child(13):hover {
+  z-index: 50;
+  transform: scale(1.1) translateY(0px) translateX(-250px);
+  background-image: url("/images/Empty_Block.png");
+}
+#about .container:nth-child(2) ul li:nth-child(14) {
+  transform: translateY(0) translateX(250px);
+  transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+}
+#about .container:nth-child(2) ul li:nth-child(14):hover {
+  z-index: 50;
+  transform: scale(1.1) translateY(0px) translateX(250px);
+  background-image: url("/images/Empty_Block.png");
+}
+#about .container:nth-child(2) ul li:nth-child(15) {
+  transform: translateY(125px) translateX(0px);
+  background-image: url("/images/Wood_Block.png");
+  transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+}
+#about .container:nth-child(2) ul li:nth-child(15):hover {
+  z-index: 50;
+  transform: scale(1.1) translateY(112.5px) translateX(0px);
+  background-image: url("/images/Empty_Block.png");
+}
+#about .container:nth-child(2) ul li:nth-child(16) {
+  transform: translateY(250px) translateX(0px);
+  background-image: url("/images/Wood_Block.png");
+  transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+}
+#about .container:nth-child(2) ul li:nth-child(16):hover {
+  z-index: 50;
+  transform: scale(1.1) translateY(225px) translateX(0px);
+  background-image: url("/images/Empty_Block.png");
+}
+#about .container:nth-child(2) ul li:nth-child(17) {
+  transform: translateY(375px) translateX(0px);
+  background-image: url("/images/Wood_Block.png");
+  transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+}
+#about .container:nth-child(2) ul li:nth-child(17):hover {
+  z-index: 50;
+  transform: scale(1.1) translateY(350px) translateX(0px);
+  background-image: url("/images/Empty_Block.png");
 }

@@ -3,8 +3,9 @@ $color-primary: #c4b9b6ff !default;
 $color-primary-alt: #8fca5cff !default;
 $color-secondary: #457520ff !default;
 $color-background: #262522 !default;
-$color-background2: #9000ff !default;
-$color-primary-alt2: rgb(204, 0, 255) !default;
+$color-background2: #2d0f5a !default;
+$color-primary-alt2: rgb(0, 76, 216) !default;
+$transparent: rgba(23, 23, 23, 0.65) !default;
 
 $font-weight-strong: 500 !default;
 $font-size-h1: 4rem !default;
@@ -15,6 +16,8 @@ $font-size-text: 1rem !default;
 
 $padding: 20px !default; // Define padding variable
 
+$block_size: 125px;
+
 $font-sizes: (
   h1: $font-size-h1,
   h2: $font-size-h2,
@@ -22,6 +25,9 @@ $font-sizes: (
   h4: $font-size-h4,
   text: $font-size-text,
 );
+
+$minecraft_title_font_path: '/minecraft-title.ttf';
+$minecraftia_font_path: '/minecraftia.ttf';
     
 // stylelint-disable
 :root {

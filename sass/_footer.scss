@@ -13,45 +13,74 @@
         text-align: center; /* Center the content inside the container */
         display: flex; /* Use flexbox to control layout */
         flex-direction: column; /* Align content vertically */
-        margin-top: 100px;
-
+        margin-top: 150px;
         p {
-            width: 100%;
+            width: 400px;
             margin: 0 auto; /* Center the paragraph horizontally */
             border: 5px solid $color-background;
             background-color: $color-primary;
             padding: 10px;
-            border-radius: 50px 50px 0 0;
             height: 200px;
-            margin-top: -100px;
             transition: transform 0.3s ease; /* Add transition for hover effect */
             transform-origin: center bottom; /* Set scaling origin */
-            &:hover {
-                transform: scale(1.1);
+
+            &:nth-child(1) {
+                margin-top: -75px;
+                border-radius: 50px 50px 0 50px;
+                transform: translateX(100px);
+                transition: transform  0.3s ease-in-out;
+                &:hover {
+                    z-index: 1;
+                    transform: scale(1.1) translateX(125px);
+                }
+            }
+
+            &:nth-child(3) {
+                margin-top: -75px;
+                border-radius: 50px 50px 0 50px;
+                transform: translateX(100px);
+                transition: transform  0.3s ease-in-out;
+                &:hover {
+                    z-index: 1;
+                    transform: scale(1.1) translateX(125px);
+                }
+            }
+
+            &:nth-child(4) {
+                margin-top: -100px;
+                border-radius: 50px 50px 50px 0;
+                transform: translateX(-100px);
+                transition: transform  0.3s ease-in-out;
+                &:hover {
+                    z-index: 1;
+                    transform: scale(1.1) translateX(-125px);
+                }
             }
         }
 
         ul {
+            transform: translateX(-100px);
+            width: 400px;
+            margin-right: 700px;
             margin: 0 auto; /* Center the paragraph horizontally */
             margin-top: -100px;
             border: 5px solid $color-background;
             list-style-type: none;
             background-color: $color-primary;
             padding: 10px;
-            border-radius: 50px 50px 0 0;
+            border-radius: 50px 50px 50px 0;
             height: 200px;
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             justify-content: center; /* Center the list items horizontally */
             flex-wrap: wrap;
             transition: transform 0.3s ease; /* Add transition for hover effect */
             transform-origin: center bottom; /* Set scaling origin */
+            transition: transform  0.3s ease-in-out;
             &:hover {
-                transform: scale(1.1);
+                z-index: 1;
+                transform: scale(1.1) translateX(-125px);
             }
-        }
-
-        li {
-            margin-right: 10px;
         }
 
         a {
