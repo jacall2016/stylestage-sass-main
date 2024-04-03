@@ -375,7 +375,6 @@ header .container .link-github svg {
   display: block;
   text-align: center;
   margin-top: 20px;
-  color: #c4b9b6ff;
   text-shadow: 3px 3px 0px #262522;
   transition: color 0.3s ease;
 }
@@ -576,14 +575,25 @@ body::before {
   /* Ensure content is above the pseudo-element */
 }
 
-#guidelines .container {
+#guidelines {
   margin-top: 50px;
+}
+#guidelines .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  grid-template-columns: 300px auto;
   justify-content: center;
   /* Center the grid horizontally */
   align-items: center;
   /* Center the grid vertically */
+  text-align: left;
+}
+#guidelines .container p {
+  width: 100px;
+}
+
+#guidelines > .container > * {
+  background-color: red;
 }
 
 .container {

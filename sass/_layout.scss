@@ -31,13 +31,26 @@ body::before {
 #main {
 }
 
-#guidelines .container{
+
+
+#guidelines {
   margin-top: 50px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-content: center; /* Center the grid horizontally */
-  align-items: center; /* Center the grid vertically */
- 
+  .container{
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 300px auto;
+    justify-content: center; /* Center the grid horizontally */
+    align-items: center; /* Center the grid vertically */
+    text-align: left;
+    p {
+      width: 100px;
+    }
+  }
+}
+
+#guidelines > .container > * {
+  background-color: red;
+
 }
 
 .container {
