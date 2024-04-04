@@ -15,7 +15,6 @@ body::before {
   background-image: url("/images/render1.png");
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.8; /* Adjust the opacity as needed */
 }
 
 /* Adjust padding as needed */
@@ -31,26 +30,89 @@ body::before {
 #main {
 }
 
+#guidelines > .container > * {
+  background-image: url("/images/Ice_Block_transparent90.png");
+  padding: 20px;
 
+  &:nth-child(2) {
+    background-image: url("/images/Water_Block_transparent80.png");
+  }
 
-#guidelines {
-  margin-top: 50px;
-  .container{
-    display: grid;
-    column-gap: 20px;
-    grid-template-columns: 300px auto;
-    justify-content: center; /* Center the grid horizontally */
-    align-items: center; /* Center the grid vertically */
-    text-align: left;
-    p {
-      width: 100px;
-    }
+  &:nth-child(3) {
+    background-image: url("/images/Green_Block.png");
+  }
+
+  &:nth-child(4) {
+    background-image: url("/images/Desert_Block.png");
+  }
+  &:nth-child(5) {
+    background-image: url("/images/Lava_Block.png");
   }
 }
 
-#guidelines > .container > * {
-  background-color: red;
+#guidelines {
+  margin: 20px;
+  margin-top: 50px;
+  .container{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center; /* Center the grid horizontally */
+    align-items: center; /* Center the grid vertically */
+    text-align: left;
 
+    p {
+      width: $block_size*3.75;
+      height: $block_size*3.75;
+      background-size: contain;
+      box-shadow: 5px 5px 5px 0px $color-background;
+      text-shadow: 1px 1px 1px $color-background;
+      color: $color-background;
+      border: 3px solid $color-background;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    h2, h3 {
+      width: $block_size*3.75;
+      height: $block_size*3.75;
+      background-size: contain;
+      border: 3px solid $color-background;
+      box-shadow: 5px 5px 5px 0px $color-background;
+      text-shadow: 1px 1px 1px $color-background;
+      color: $color-background;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    a {
+      margin: 10px 0px 10px 00px;
+      height: 50px;
+    }
+  }
+
+  .container :last-child {
+    padding: 0%;
+  }
+
+  @media (min-width: 1000px) { /* Adjust the breakpoint as needed */
+    
+    .container :last-child {
+      grid-column: 2; /* Place the last element in the second column */
+    }
+
+    .container {
+      grid-template-columns: repeat(2, auto); /* Adjusted for three columns on desktop */
+    }
+  }
+  
+  @media (min-width: 1500px) {
+    
+    .container :last-child {
+      grid-column: 2;
+    }
+
+    .container {
+      grid-template-columns: repeat(3, auto);
+    }
+  }
 }
 
 .container {
@@ -68,8 +130,7 @@ article {
 
 #contribute {
   margin-top: 50px;
-  
-  
+  margin: 20px;
 
   .container {
     width: 100%;
@@ -77,10 +138,25 @@ article {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    h2 {
+      margin: 20px;
+    }
     p {
+      background-image: url("/images/Water_Block_transparent80.png");
+      background-size: contain;
+      color: $color-background;
+      padding: 20px;
+      text-shadow: 1px 1px 1px $color-background;
+      transition: transform 0.3s ease-in-out;
       text-align: center;
       width: 40ch;
-      margin-top:10px;
+      a {
+        margin: 10px 0px 10px 00px;
+      }
+
+      &:nth-child(2) {
+        background-image: url("/images/Green_Block.png");
+      }
     }
 
   }
@@ -113,6 +189,8 @@ article {
       position: absolute;
       width: 40px;
       height: 300px;
+      background-image: url('/images/Wood_Block_light.png');
+      background-size: contain;
       background-color: $color-primary; /* Change this to your desired color */
       z-index: -1;
       transform: rotate(45deg);
@@ -181,7 +259,7 @@ article {
       height: 0px;
 
       h3 {
-        background-image: url("/images/Ice_Block.png");
+        background-image: url("/images/Ice_Block_transparent90.png");
         margin: 10px;
         width:$block_size;
         height: $block_size;
@@ -211,7 +289,7 @@ article {
           }
 
         &:nth-child(2) {
-          background-image: url("/images/Water_Block.png");
+          background-image: url("/images/Water_Block_transparent80.png");
           color: $color-primary;
           transition: transform 0.3s ease-in-out;
           &:hover {

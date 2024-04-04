@@ -75,7 +75,7 @@ header {
   align-items: center;
 }
 header .container {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(23, 23, 23, 0.5);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -106,9 +106,10 @@ header .container .link-github svg {
   /* Add padding */
   border-radius: 10px;
   /* Add border radius */
-}
-.profile .container > :last-child {
-  display: none;
+  /*
+  .container > :last-child {
+    display: none;
+  }*/
 }
 .profile .container {
   display: flex;
@@ -117,7 +118,7 @@ header .container .link-github svg {
   justify-content: center;
   margin: 0 auto;
   /* Center the container horizontally */
-  background-color: rgba(23, 23, 23, 0.65);
+  background-color: rgba(23, 23, 23, 0.5);
   border-radius: 25px;
 }
 .profile .container #profile-title {
@@ -146,7 +147,8 @@ header .container .link-github svg {
 .profile .container ul li {
   width: 300px;
   height: 300px;
-  border-radius: 50% 50% 50% 0;
+  background-image: url("/images/Green_Block.png");
+  background-size: cover;
   margin: 0px;
   display: flex;
   /* Use flexbox to center contents */
@@ -154,18 +156,17 @@ header .container .link-github svg {
   /* Center contents horizontally */
   align-items: center;
   /* Center contents vertically */
+  border: 2px solid #262522;
 }
 .profile .container ul li:nth-child(1) {
   background-color: #8fca5cff;
   /* Set your desired color */
-  border-top: #457520ff 5px solid;
-  border-right: #457520ff 5px solid;
   transform: rotate(-90deg);
   transition: transform 0.5s ease-in-out;
 }
 .profile .container ul li:nth-child(1):hover {
   z-index: 1;
-  transform: scale(1.2) rotate(90deg);
+  transform: scale(1) rotate(90deg);
   transition: transform 0.5s ease-in-out;
 }
 .profile .container ul li:nth-child(1):hover span {
@@ -175,33 +176,31 @@ header .container .link-github svg {
   transform: rotate(90deg);
 }
 .profile .container ul li:nth-child(2) {
+  background-image: url("/images/Ice_Block_transparent90.png");
   background-color: #457520ff;
   /* Set your desired color */
-  border-top: #8fca5cff 5px solid;
-  border-right: #8fca5cff 5px solid;
   display: flex;
   flex-direction: column;
   transition: transform 0.5s ease-in-out;
 }
 .profile .container ul li:nth-child(2):hover {
   z-index: 1;
-  transform: scale(1.2) rotate(180deg);
+  transform: scale(1) rotate(180deg);
   transition: transform 0.5s ease-in-out;
 }
 .profile .container ul li:nth-child(2):hover span {
   transform: rotate(-180deg);
 }
 .profile .container ul li:nth-child(3) {
+  background-image: url("/images/Desert_Block.png");
   background-color: #457520ff;
   /* Set your desired color */
-  border-top: #8fca5cff 5px solid;
-  border-right: #8fca5cff 5px solid;
   transform: rotate(-180deg);
   transition: transform 0.5s ease-in-out;
 }
 .profile .container ul li:nth-child(3):hover {
   z-index: 1;
-  transform: scale(1.2) rotate(-360deg);
+  transform: scale(1) rotate(-360deg);
   transition: transform 0.5s ease-in-out;
 }
 .profile .container ul li:nth-child(3):hover span {
@@ -211,16 +210,15 @@ header .container .link-github svg {
   transform: rotate(180deg);
 }
 .profile .container ul li:nth-child(4) {
+  background-image: url("/images/Lava_Block.png");
   background-color: #8fca5cff;
   /* Set your desired color */
-  border-top: #457520ff 5px solid;
-  border-right: #457520ff 5px solid;
   transform: rotate(90deg);
   transition: transform 0.5s ease-in-out;
 }
 .profile .container ul li:nth-child(4):hover {
   z-index: 1;
-  transform: scale(1.2) rotate(270deg);
+  transform: scale(1) rotate(270deg);
   transition: transform 0.5s ease-in-out;
 }
 .profile .container ul li:nth-child(4):hover span {
@@ -266,7 +264,7 @@ header .container .link-github svg {
 .profile #profile-title {
   margin-bottom: 15px;
   /* Add space below the title */
-  color: #333;
+  color: #262522;
   /* Set title color */
   font-size: 1.25rem;
 }
@@ -284,36 +282,19 @@ header .container .link-github svg {
   font-size: 16px;
   /* Set font size for list items */
 }
-.profile ul span {
-  margin-right: 5px;
-  /* Add space between spans */
-}
-.profile ul a {
-  color: #007bff;
-  /* Set link color */
-  text-decoration: none;
-  /* Remove default underline */
-  transition: color 0.3s ease;
-  /* Add smooth transition for color change */
-}
-.profile ul a:hover {
-  color: #0056b3;
-  /* Change link color on hover */
-}
 
 #styles .container {
   margin: 0 auto;
   /* Center the container horizontally */
-  background-color: rgba(23, 23, 23, 0.65);
+  background-color: rgba(23, 23, 23, 0.5);
   border-radius: 25px;
 }
 #styles .container h2 {
   padding-top: 50px;
   z-index: 50;
   text-align: center;
-  color: #262522;
-  color: #c4b9b6ff;
-  text-shadow: 2px 2px 0px #262522;
+  color: #ffffa0e0;
+  text-shadow: 2px 2px 0px #ff2600db;
 }
 #styles .container ul.features {
   align-items: center;
@@ -325,7 +306,7 @@ header .container .link-github svg {
   list-style: none;
   padding: 0;
   margin: 20px;
-  margin-top: 200px;
+  margin-top: 150px;
   height: 400px;
 }
 #styles .container ul.features li {
@@ -337,50 +318,106 @@ header .container .link-github svg {
   display: flex;
   /* Use flexbox to center contents */
   margin-right: -80px;
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0.892), rgba(255, 255, 0, 0.859));
+  background-size: contain;
 }
 #styles .container ul.features li span {
   display: none;
 }
 #styles .container ul.features li:nth-child(1) {
-  z-index: 1;
-  background-color: #2d0f5a;
+  z-index: 3;
+  background-color: #ff2600db;
   /* Set your desired color */
-  border-top: #004cd8 10px solid;
-  border-right: #004cd8 10px solid;
+  border-top: #ffffa0e0 10px solid;
+  border-right: #ffffa0e0 10px solid;
   transform: translateX(30px);
-  transition: transform 0.3s ease-in-out;
+  animation: gradientgrow 0.75s ease-in-out infinite alternate;
 }
-#styles .container ul.features li:nth-child(1):hover {
-  transform: rotate(45deg) translateX(90px);
+@keyframes gradientgrow {
+  0% {
+    transform: translateX(30px) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(30px) scale(1.05);
+    opacity: 0.85;
+  }
 }
 #styles .container ul.features li:nth-child(2) {
-  background-color: #004cd8;
-  border-top: #2d0f5a 10px solid;
-  border-right: #2d0f5a 10px solid;
+  z-index: 1;
+  background-color: #ffffa0e0;
+  border-top: #ff2600db 10px solid;
+  border-right: #ff2600db 10px solid;
   transform: rotate(-45deg) translateY(-70px) translateX(30px);
+  animation: gradientgrow2 0.75s ease-in-out infinite alternate;
+}
+@keyframes gradientgrow2 {
+  0% {
+    transform: rotate(-45deg) translateY(-70px) translateX(30px) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translateY(-70px) translateX(30px) scale(1.05);
+    opacity: 0.85;
+  }
 }
 #styles .container ul.features li:nth-child(3) {
-  background-color: #2d0f5a;
-  border-top: #004cd8 10px solid;
-  border-right: #004cd8 10px solid;
+  z-index: 2;
+  background-color: #ff2600db;
+  border-top: #ffffa0e0 10px solid;
+  border-right: #ffffa0e0 10px solid;
   transform: translateX(-100px) rotate(-90deg);
+  animation: gradientgrow3 0.75s ease-in-out infinite alternate;
+}
+@keyframes gradientgrow3 {
+  0% {
+    transform: translateX(-100px) rotate(-90deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100px) rotate(-90deg) scale(1.05);
+    opacity: 0.85;
+  }
 }
 #styles .container .link-allstyles {
-  z-index: 50;
-  color: #c4b9b6ff;
+  display: flex;
+  justify-content: center;
+  /* Horizontally center */
+  align-items: center;
+  /* Vertically center */
   position: relative;
-  transform: translateY(-200px);
-  font-size: 1.5rem;
-  text-decoration: none;
+  padding-top: 60px;
+  transform: translateY(-100px);
+  z-index: 50;
+  width: 400px;
+  /* Adjust width as needed */
+  height: 600px;
+  /* Adjust height as needed */
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2.4rem;
+  font-family: "minecraft-title";
   display: block;
   text-align: center;
-  margin-top: 20px;
-  text-shadow: 3px 3px 0px #262522;
-  transition: color 0.3s ease;
-}
-#styles .container .link-allstyles:hover {
-  color: #8fca5cff;
   text-shadow: 2px 2px 0px #262522;
+  background-image: url("/images/Wood_Block_light.png");
+}
+#styles .container .link-allstyles::before {
+  content: "";
+  position: absolute;
+  top: 200px;
+  /* Adjust top position to control the width of the top */
+  left: 0;
+  width: 100%;
+  /* Make it stretch across the width */
+  height: 100px;
+  /* Adjust height as needed */
+  background-color: #c4b9b6ff;
+  /* Adjust color as needed */
+  transform: skewY(-20deg);
+  /* Adjust skew angle as needed */
+  z-index: -1;
+  /* Move it behind the main content */
 }
 
 .page-footer {
@@ -425,7 +462,7 @@ header .container .link-github svg {
 }
 .page-footer .container p:nth-child(1) {
   margin-top: -75px;
-  border-radius: 50px 50px 0 50px;
+  border-radius: 20px 20px 0 20px;
   transform: translateX(100px);
   transition: transform 0.3s ease-in-out;
 }
@@ -435,9 +472,12 @@ header .container .link-github svg {
 }
 .page-footer .container p:nth-child(3) {
   margin-top: -75px;
-  border-radius: 50px 50px 0 50px;
+  border-radius: 20px 20px 0 20px;
   transform: translateX(100px);
   transition: transform 0.3s ease-in-out;
+}
+.page-footer .container p:nth-child(3) a:hover {
+  color: #ffffa0e0;
 }
 .page-footer .container p:nth-child(3):hover {
   z-index: 1;
@@ -445,7 +485,7 @@ header .container .link-github svg {
 }
 .page-footer .container p:nth-child(4) {
   margin-top: -100px;
-  border-radius: 50px 50px 50px 0;
+  border-radius: 20px 20px 20px 0;
   transform: translateX(-100px);
   transition: transform 0.3s ease-in-out;
 }
@@ -464,10 +504,10 @@ header .container .link-github svg {
   list-style-type: none;
   background-color: #c4b9b6ff;
   padding: 10px;
-  border-radius: 50px 50px 50px 0;
+  border-radius: 20px 20px 20px 0;
   height: 200px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   /* Center the list items horizontally */
   flex-wrap: wrap;
@@ -485,8 +525,10 @@ header .container .link-github svg {
   color: #457520ff;
   text-decoration: none;
   transition: color 0.3s ease;
+  width: 100%;
+  border-radius: 5px;
 }
-.page-footer .container a:hover {
+p .page-footer .container a:hover {
   color: #413f3a;
 }
 .page-footer .container a svg {
@@ -533,6 +575,10 @@ a {
   color: #457520ff;
   text-decoration: none;
 }
+a:hover {
+  color: #ffffa0e0;
+}
+
 .skip-link {
   position: absolute;
   padding: var(--padding);
@@ -540,6 +586,74 @@ a {
 
 .link-github {
   color: #262522;
+}
+
+#guidelines .container a {
+  --btn-size: 30pt;
+  font-size: 20px;
+  height: calc(var(--btn-size) * 1);
+  width: calc(var(--btn-size) * 10);
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  user-select: none;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  padding-bottom: 0.3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffa0e0 url("https://i.ibb.co/rb2TWXL/bgbtn.png") center/cover;
+  image-rendering: pixelated;
+  border: 2px solid #262522;
+  color: #c4b9b6ff;
+  text-shadow: 2px 2px #262522;
+  box-shadow: inset -2px -4px #262522, inset 2px 2px #c4b9b6ff;
+}
+#guidelines .container a:hover {
+  background-color: rgba(100, 100, 255, 0.45);
+  z-index: 2;
+  text-shadow: 2px 2px #262522;
+  color: #ffffa0e0;
+}
+#guidelines .container a:active {
+  box-shadow: inset -2px -4px #262522, inset 2px 2px #c4b9b6ff;
+}
+
+#contribute .container p:nth-child(3) a {
+  --btn-size: 30pt;
+  font-size: 20px;
+  height: calc(var(--btn-size) * 1);
+  width: calc(var(--btn-size) * 10);
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  user-select: none;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  padding-bottom: 0.3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffa0e0 url("https://i.ibb.co/rb2TWXL/bgbtn.png") center/cover;
+  image-rendering: pixelated;
+  border: 2px solid #262522;
+  color: #c4b9b6ff;
+  text-shadow: 2px 2px #262522;
+  box-shadow: inset -2px -4px #262522, inset 2px 2px #c4b9b6ff;
+}
+#contribute .container p:nth-child(3) a:hover {
+  background-color: rgba(100, 100, 255, 0.45);
+  z-index: 2;
+  text-shadow: 2px 2px #262522;
+  color: #ffffa0e0;
+}
+#contribute .container p:nth-child(3) a:active {
+  box-shadow: inset -2px -4px #262522, inset 2px 2px #c4b9b6ff;
 }
 
 /* Apply the background image to the body */
@@ -564,8 +678,6 @@ body::before {
   background-image: url("/images/render1.png");
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.8;
-  /* Adjust the opacity as needed */
 }
 
 /* Adjust padding as needed */
@@ -575,13 +687,30 @@ body::before {
   /* Ensure content is above the pseudo-element */
 }
 
+#guidelines > .container > * {
+  background-image: url("/images/Ice_Block_transparent90.png");
+  padding: 20px;
+}
+#guidelines > .container > *:nth-child(2) {
+  background-image: url("/images/Water_Block_transparent80.png");
+}
+#guidelines > .container > *:nth-child(3) {
+  background-image: url("/images/Green_Block.png");
+}
+#guidelines > .container > *:nth-child(4) {
+  background-image: url("/images/Desert_Block.png");
+}
+#guidelines > .container > *:nth-child(5) {
+  background-image: url("/images/Lava_Block.png");
+}
+
 #guidelines {
+  margin: 20px;
   margin-top: 50px;
 }
 #guidelines .container {
   display: grid;
-  column-gap: 20px;
-  grid-template-columns: 300px auto;
+  grid-template-columns: auto;
   justify-content: center;
   /* Center the grid horizontally */
   align-items: center;
@@ -589,11 +718,52 @@ body::before {
   text-align: left;
 }
 #guidelines .container p {
-  width: 100px;
+  width: 468.75px;
+  height: 468.75px;
+  background-size: contain;
+  box-shadow: 5px 5px 5px 0px #262522;
+  text-shadow: 1px 1px 1px #262522;
+  color: #262522;
+  border: 3px solid #262522;
+  transition: transform 0.3s ease-in-out;
 }
-
-#guidelines > .container > * {
-  background-color: red;
+#guidelines .container h2, #guidelines .container h3 {
+  width: 468.75px;
+  height: 468.75px;
+  background-size: contain;
+  border: 3px solid #262522;
+  box-shadow: 5px 5px 5px 0px #262522;
+  text-shadow: 1px 1px 1px #262522;
+  color: #262522;
+  transition: transform 0.3s ease-in-out;
+}
+#guidelines .container a {
+  margin: 10px 0px 10px 0px;
+  height: 50px;
+}
+#guidelines .container :last-child {
+  padding: 0%;
+}
+@media (min-width: 1000px) {
+  #guidelines {
+    /* Adjust the breakpoint as needed */
+  }
+  #guidelines .container :last-child {
+    grid-column: 2;
+    /* Place the last element in the second column */
+  }
+  #guidelines .container {
+    grid-template-columns: repeat(2, auto);
+    /* Adjusted for three columns on desktop */
+  }
+}
+@media (min-width: 1500px) {
+  #guidelines .container :last-child {
+    grid-column: 2;
+  }
+  #guidelines .container {
+    grid-template-columns: repeat(3, auto);
+  }
 }
 
 .container {
@@ -603,7 +773,7 @@ body::before {
 article {
   display: block;
   color: lightgrey;
-  background-color: rgba(23, 23, 23, 0.65);
+  background-color: rgba(23, 23, 23, 0.5);
   text-align: center;
   padding: 20px;
   border-radius: 25px;
@@ -611,6 +781,7 @@ article {
 
 #contribute {
   margin-top: 50px;
+  margin: 20px;
 }
 #contribute .container {
   width: 100%;
@@ -619,10 +790,24 @@ article {
   justify-content: center;
   align-items: center;
 }
+#contribute .container h2 {
+  margin: 20px;
+}
 #contribute .container p {
+  background-image: url("/images/Water_Block_transparent80.png");
+  background-size: contain;
+  color: #262522;
+  padding: 20px;
+  text-shadow: 1px 1px 1px #262522;
+  transition: transform 0.3s ease-in-out;
   text-align: center;
   width: 40ch;
-  margin-top: 10px;
+}
+#contribute .container p a {
+  margin: 10px 0px 10px 0px;
+}
+#contribute .container p:nth-child(2) {
+  background-image: url("/images/Green_Block.png");
 }
 #contribute .container:nth-child(1) {
   order: 1;
@@ -650,6 +835,8 @@ article {
   position: absolute;
   width: 40px;
   height: 300px;
+  background-image: url("/images/Wood_Block_light.png");
+  background-size: contain;
   background-color: #c4b9b6ff;
   /* Change this to your desired color */
   z-index: -1;
@@ -716,7 +903,7 @@ article {
   height: 0px;
 }
 #contribute footer:nth-child(3) .container h3 {
-  background-image: url("/images/Ice_Block.png");
+  background-image: url("/images/Ice_Block_transparent90.png");
   margin: 10px;
   width: 125px;
   height: 125px;
@@ -745,7 +932,7 @@ article {
   transform: scale(1.1);
 }
 #contribute footer:nth-child(3) .container a:nth-child(2) {
-  background-image: url("/images/Water_Block.png");
+  background-image: url("/images/Water_Block_transparent80.png");
   color: #c4b9b6ff;
   transition: transform 0.3s ease-in-out;
 }
@@ -763,7 +950,105 @@ article {
   transform: scale(1.1);
 }
 
-#about .container:nth-child(2) ul {
+#about {
+  margin: 20px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#about .container:first-child {
+  z-index: 1;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  /* Center the grid horizontally */
+  align-items: center;
+  /* Center the grid vertically */
+}
+#about .container:first-child > * {
+  align-items: center;
+  background-image: url("/images/Water_Block_transparent80.png");
+  background-size: contain;
+  width: 125px;
+  height: 125px;
+  padding: 20px;
+  position: relative;
+  /* Add position relative */
+  overflow: hidden;
+  color: transparent;
+  border: 3px solid #262522;
+  transition: width 0.75s ease-in-out, height 0.75s ease-in-out;
+  /* Add width and height to the transition */
+}
+#about .container:first-child > *:hover {
+  z-index: 50;
+  width: 406.25px;
+  height: 406.25px;
+  color: #c4b9b6ff;
+}
+#about .container:first-child > * a {
+  color: transparent;
+}
+#about .container:first-child > :nth-child(1) {
+  background-image: url("/images/Stone_Block.png");
+}
+#about .container:first-child > :nth-child(2) {
+  background-image: url("/images/Lava_Block.png");
+}
+#about .container:first-child > :nth-child(3) {
+  background-image: url("/images/Desert_Block.png");
+}
+#about .container:first-child > :nth-child(4) {
+  background-image: url("/images/ice_Block_transparent90.png");
+}
+#about .container:first-child::after {
+  content: "";
+  /* Required for the pseudo-element */
+  grid-column: 3;
+  /* Place the fake element in the last column */
+  background-image: url("/images/Green_Block.png");
+  /* Set the background image for the fake element */
+  background-size: contain;
+  width: 125px;
+  /* Set the width */
+  height: 125px;
+  /* Set the height */
+  padding: 20px;
+  /* Set padding if needed */
+  position: relative;
+  /* Add position relative */
+  overflow: hidden;
+  color: transparent;
+  border: 3px solid #262522;
+  transition: width 0.75s ease-in-out, height 0.75s ease-in-out;
+  /* Add width and height to the transition */
+  z-index: 0;
+  /* Ensure the fake element is below other elements */
+}
+#about .container:last-child > :nth-child(-n+3) {
+  display: grid;
+  grid-template-columns: auto auto;
+  /* Two columns for the grid with automatic width */
+  justify-items: center;
+  /* Center items horizontally */
+  align-items: center;
+  /* Center items vertically */
+  background-image: url("/images/Stone_Block.png");
+  background-size: contain;
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  border: 3px solid #262522;
+  text-shadow: 1px 1px 1px #262522;
+  padding: 0px 100px 0px 100px;
+}
+#about .container:last-child > :nth-child(-n+3):nth-child(2) {
+  background-image: url("/images/Lava_Block.png");
+  padding: 10px 125px 10px 125px;
+}
+#about .container:last-child:nth-child(2) ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -776,7 +1061,7 @@ article {
   box-shadow: 0px 0px 60px 100px rgba(135, 207, 235, 0.75);
   /* Outer border */
 }
-#about .container:nth-child(2) ul li {
+#about .container:last-child:nth-child(2) ul li {
   position: absolute;
   background-image: url("/images/Leaves_Block.png");
   width: 125px;
@@ -791,159 +1076,183 @@ article {
   font-family: "minecraft-title", sans-serif;
   text-shadow: 2px 2px 0px #262522;
 }
-#about .container:nth-child(2) ul li:nth-child(1) {
+#about .container:last-child:nth-child(2) ul li:nth-child(1) {
   transform: translateY(-375px);
   transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
 }
-#about .container:nth-child(2) ul li:nth-child(1):hover {
+#about .container:last-child:nth-child(2) ul li:nth-child(1):hover {
   z-index: 50;
   transform: scale(1.1) translateY(-343.75px);
   background-image: url("/images/Empty_Block.png");
 }
-#about .container:nth-child(2) ul li:nth-child(2) {
+#about .container:last-child:nth-child(2) ul li:nth-child(2) {
   transform: translateY(-250px) translateX(0px);
   transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
 }
-#about .container:nth-child(2) ul li:nth-child(2):hover {
+#about .container:last-child:nth-child(2) ul li:nth-child(2):hover {
   z-index: 50;
   transform: scale(1.1) translateY(-218.75px);
   background-image: url("/images/Empty_Block.png");
 }
-#about .container:nth-child(2) ul li:nth-child(3) {
+#about .container:last-child:nth-child(2) ul li:nth-child(3) {
   transform: translateY(-250px) translateX(125px);
   transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
 }
-#about .container:nth-child(2) ul li:nth-child(3):hover {
+#about .container:last-child:nth-child(2) ul li:nth-child(3):hover {
   z-index: 50;
   transform: scale(1.1) translateY(-218.75px) translateX(125px);
   background-image: url("/images/Empty_Block.png");
 }
-#about .container:nth-child(2) ul li:nth-child(4) {
+#about .container:last-child:nth-child(2) ul li:nth-child(4) {
   transform: translateY(-250px) translateX(-125px);
   transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
 }
-#about .container:nth-child(2) ul li:nth-child(4):hover {
+#about .container:last-child:nth-child(2) ul li:nth-child(4):hover {
   z-index: 50;
   transform: scale(1.1) translateY(-218.75px) translateX(-125px);
   background-image: url("/images/Empty_Block.png");
 }
-#about .container:nth-child(2) ul li:nth-child(5) {
+#about .container:last-child:nth-child(2) ul li:nth-child(5) {
   transform: translateY(-125px);
   transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
 }
-#about .container:nth-child(2) ul li:nth-child(5):hover {
+#about .container:last-child:nth-child(2) ul li:nth-child(5):hover {
   z-index: 50;
   transform: scale(1.1) translateY(-125px);
   background-image: url("/images/Empty_Block.png");
 }
-#about .container:nth-child(2) ul li:nth-child(6) {
+#about .container:last-child:nth-child(2) ul li:nth-child(6) {
   transform: translateY(-125px) translateX(125px);
   transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
 }
-#about .container:nth-child(2) ul li:nth-child(6):hover {
+#about .container:last-child:nth-child(2) ul li:nth-child(6):hover {
   z-index: 50;
   transform: scale(1.1) translateY(-125px) translateX(125px);
   background-image: url("/images/Empty_Block.png");
 }
-#about .container:nth-child(2) ul li:nth-child(7) {
+#about .container:last-child:nth-child(2) ul li:nth-child(7) {
   transform: translateY(-125px) translateX(-125px);
   transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
 }
-#about .container:nth-child(2) ul li:nth-child(7):hover {
+#about .container:last-child:nth-child(2) ul li:nth-child(7):hover {
   z-index: 50;
   transform: scale(1.1) translateY(-125px) translateX(-125px);
   background-image: url("/images/Empty_Block.png");
 }
-#about .container:nth-child(2) ul li:nth-child(8) {
+#about .container:last-child:nth-child(2) ul li:nth-child(8) {
   transform: translateY(-125px) translateX(-250px);
   transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
 }
-#about .container:nth-child(2) ul li:nth-child(8):hover {
+#about .container:last-child:nth-child(2) ul li:nth-child(8):hover {
   z-index: 50;
   transform: scale(1.1) translateY(-125px) translateX(-250px);
   background-image: url("/images/Empty_Block.png");
 }
-#about .container:nth-child(2) ul li:nth-child(9) {
+#about .container:last-child:nth-child(2) ul li:nth-child(9) {
   transform: translateY(-125px) translateX(250px);
   transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
 }
-#about .container:nth-child(2) ul li:nth-child(9):hover {
+#about .container:last-child:nth-child(2) ul li:nth-child(9):hover {
   z-index: 50;
   transform: scale(1.1) translateY(-125px) translateX(250px);
   background-image: url("/images/Empty_Block.png");
 }
-#about .container:nth-child(2) ul li:nth-child(10) {
+#about .container:last-child:nth-child(2) ul li:nth-child(10) {
   transform: translateY(0px) translateX(0px);
   transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
 }
-#about .container:nth-child(2) ul li:nth-child(10):hover {
+#about .container:last-child:nth-child(2) ul li:nth-child(10):hover {
   z-index: 50;
   transform: scale(1.1) translateY(0px) translateX(0px);
   background-image: url("/images/Empty_Block.png");
 }
-#about .container:nth-child(2) ul li:nth-child(11) {
+#about .container:last-child:nth-child(2) ul li:nth-child(11) {
   transform: translateY(0px) translateX(125px);
   transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
 }
-#about .container:nth-child(2) ul li:nth-child(11):hover {
+#about .container:last-child:nth-child(2) ul li:nth-child(11):hover {
   z-index: 50;
   transform: scale(1.1) translateY(0px) translateX(125px);
   background-image: url("/images/Empty_Block.png");
 }
-#about .container:nth-child(2) ul li:nth-child(12) {
+#about .container:last-child:nth-child(2) ul li:nth-child(12) {
   transform: translateY(0px) translateX(-125px);
   transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
 }
-#about .container:nth-child(2) ul li:nth-child(12):hover {
+#about .container:last-child:nth-child(2) ul li:nth-child(12):hover {
   z-index: 50;
   transform: scale(1.1) translateY(0px) translateX(-125px);
   background-image: url("/images/Empty_Block.png");
 }
-#about .container:nth-child(2) ul li:nth-child(13) {
+#about .container:last-child:nth-child(2) ul li:nth-child(13) {
   transform: translateY(0px) translateX(-250px);
   transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
 }
-#about .container:nth-child(2) ul li:nth-child(13):hover {
+#about .container:last-child:nth-child(2) ul li:nth-child(13):hover {
   z-index: 50;
   transform: scale(1.1) translateY(0px) translateX(-250px);
   background-image: url("/images/Empty_Block.png");
 }
-#about .container:nth-child(2) ul li:nth-child(14) {
+#about .container:last-child:nth-child(2) ul li:nth-child(14) {
   transform: translateY(0) translateX(250px);
   transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
 }
-#about .container:nth-child(2) ul li:nth-child(14):hover {
+#about .container:last-child:nth-child(2) ul li:nth-child(14):hover {
   z-index: 50;
   transform: scale(1.1) translateY(0px) translateX(250px);
   background-image: url("/images/Empty_Block.png");
 }
-#about .container:nth-child(2) ul li:nth-child(15) {
+#about .container:last-child:nth-child(2) ul li:nth-child(15) {
   transform: translateY(125px) translateX(0px);
   background-image: url("/images/Wood_Block.png");
   transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
 }
-#about .container:nth-child(2) ul li:nth-child(15):hover {
+#about .container:last-child:nth-child(2) ul li:nth-child(15):hover {
   z-index: 50;
   transform: scale(1.1) translateY(112.5px) translateX(0px);
   background-image: url("/images/Empty_Block.png");
 }
-#about .container:nth-child(2) ul li:nth-child(16) {
+#about .container:last-child:nth-child(2) ul li:nth-child(16) {
   transform: translateY(250px) translateX(0px);
   background-image: url("/images/Wood_Block.png");
   transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
 }
-#about .container:nth-child(2) ul li:nth-child(16):hover {
+#about .container:last-child:nth-child(2) ul li:nth-child(16):hover {
   z-index: 50;
   transform: scale(1.1) translateY(225px) translateX(0px);
   background-image: url("/images/Empty_Block.png");
 }
-#about .container:nth-child(2) ul li:nth-child(17) {
+#about .container:last-child:nth-child(2) ul li:nth-child(17) {
   transform: translateY(375px) translateX(0px);
   background-image: url("/images/Wood_Block.png");
   transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
 }
-#about .container:nth-child(2) ul li:nth-child(17):hover {
+#about .container:last-child:nth-child(2) ul li:nth-child(17):hover {
   z-index: 50;
   transform: scale(1.1) translateY(350px) translateX(0px);
   background-image: url("/images/Empty_Block.png");
+}
+
+#about .container:last-child > :nth-last-child(-n+2) {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
+  /* Two columns for the grid with automatic width */
+  justify-items: center;
+  /* Center items horizontally */
+  align-items: center;
+  /* Center items vertically */
+  background-image: url("/images/Stone_Block.png");
+  background-size: contain;
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  border: 3px solid #262522;
+  text-shadow: 1px 1px 1px #262522;
+  padding: 0px 100px 0px 100px;
+}
+
+#about .container:last-child > :nth-last-child(1) {
+  background-image: url("/images/Lava_Block.png");
+  padding: 10px;
 }
