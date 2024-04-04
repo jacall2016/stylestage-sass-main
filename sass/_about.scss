@@ -1,11 +1,12 @@
 #about {
-    margin: 20px;
-    margin-top: 50px;
+    //margin: 20px;
+    //margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     .container:first-child {
+        margin-top: 50px;
         z-index: 1;
         display: grid;
         grid-template-columns: auto auto auto;
@@ -14,9 +15,7 @@
     }
     
     .container:first-child > * {
-        
         align-items: center;
-        
         background-image: url("/images/Water_Block_transparent80.png");
         background-size: contain;
         width: $block-size;
@@ -26,15 +25,25 @@
         overflow: hidden;
         color: transparent;
         border: 3px solid $color-background;
+        text-shadow: 2px 2px transparent;
         transition:width 0.75s ease-in-out, height 0.75s ease-in-out; /* Add width and height to the transition */
         &:hover {
             z-index: 50;
             width: $block-size * 3.25;
             height: $block-size * 3.25;
-            color: $color-primary;
+            color: $color-background;
+            text-shadow: 1px 1px $color-background;
+            a {
+                color: $color-secondary;
+            }
         }
         a {
             color: transparent;
+            text-decoration: none;
+            &:hover {
+                color: $color-primary-alt;
+                text-shadow: 1px 1px $color-background;
+            }
         }
     }
 
@@ -61,7 +70,6 @@
         background-size: contain;
         width: $block-size; /* Set the width */
         height: $block-size; /* Set the height */
-        padding: 20px; /* Set padding if needed */
         position: relative; /* Add position relative */
         overflow: hidden;
         color: transparent;
@@ -71,6 +79,7 @@
     }
 
     .container:last-child {
+        margin-top: 100px;
         &> :nth-child(-n+3) {
             display: grid;
             grid-template-columns: auto auto; /* Two columns for the grid with automatic width */
@@ -78,12 +87,13 @@
             align-items: center; /* Center items vertically */
             background-image: url("/images/Stone_Block.png");
             background-size: contain;
-            width: 100%;
+            //width: 50%;
+            //transform: translateX(50%);
             height: 200px;
             padding: 10px;
             border: 3px solid $color-background;
             text-shadow: 1px 1px 1px $color-background;
-            padding: 0px 100px 0px 100px;
+            
             &:nth-child(2) {
                 background-image: url("/images/Lava_Block.png");
                 padding: 10px 125px 10px 125px;

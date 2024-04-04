@@ -66,6 +66,7 @@ abbr, acronym {
 
 header {
   color: skyblue;
+  text-shadow: 3px 3px #262522;
   background-image: url("/images/Grass_Block.webp");
   background-repeat: repeat-x;
   background-size: contain;
@@ -75,24 +76,31 @@ header {
   align-items: center;
 }
 header .container {
-  background-color: rgba(23, 23, 23, 0.5);
+  padding-bottom: 10px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgba(23, 23, 23, 0.35);
 }
 header .container h1 {
-  font-size: var(--font-size-h1);
+  font-family: "minecraft-title", sans-serif;
+  font-size: 6rem;
   font-weight: var(--font-weight-strong);
 }
 header .container h2 {
+  color: #ffffa0e0;
   font-size: calc(var(--font-size-h2) * 0.75);
   font-weight: var(--font-weight-strong);
   margin-bottom: 10px;
+  width: 600px;
+  text-align: center;
 }
 header .container .link-github {
   display: flex;
   align-items: center;
+  text-shadow: 0px 0px #262522;
+  padding-top: 10px;
 }
 header .container .link-github svg {
   width: 20px;
@@ -102,10 +110,8 @@ header .container .link-github svg {
 }
 
 .profile {
-  padding: 20px;
-  /* Add padding */
-  border-radius: 10px;
-  /* Add border radius */
+  margin: 0%;
+  background-color: rgba(23, 23, 23, 0.35);
   /*
   .container > :last-child {
     display: none;
@@ -118,7 +124,6 @@ header .container .link-github svg {
   justify-content: center;
   margin: 0 auto;
   /* Center the container horizontally */
-  background-color: rgba(23, 23, 23, 0.5);
   border-radius: 25px;
 }
 .profile .container #profile-title {
@@ -284,10 +289,8 @@ header .container .link-github svg {
 }
 
 #styles .container {
+  background-color: rgba(23, 23, 23, 0.35);
   margin: 0 auto;
-  /* Center the container horizontally */
-  background-color: rgba(23, 23, 23, 0.5);
-  border-radius: 25px;
 }
 #styles .container h2 {
   padding-top: 50px;
@@ -542,6 +545,14 @@ p .page-footer .container a:hover {
 }
 
 nav {
+  position: -webkit-sticky;
+  /* For Safari */
+  position: sticky;
+  /* For other browsers */
+  top: 0;
+  /* Stick it to the top */
+  z-index: 1000;
+  /* Set a high z-index to ensure it stays on top of other content */
   background-color: #c4b9b6ff;
   color: #262522;
   font-family: var(--font-family);
@@ -555,20 +566,17 @@ nav ul {
   padding: 0;
   /* Remove default padding */
 }
-nav ul li {
-  margin: 0 10px;
-  /* Add space between the buttons */
-}
 nav ul li a {
   color: #262522;
   text-decoration: none;
   /* Remove underline */
   transition: color 0.3s;
   /* Smooth transition for hover effect */
+  padding: 0px 10px 0px 10px;
 }
 nav ul li a:hover {
-  color: #413f3a;
-  /* Adjust the color on hover */
+  color: #8fca5cff;
+  background-color: #457520ff;
 }
 
 a {
@@ -680,9 +688,19 @@ body::before {
   background-size: cover;
 }
 
+/* Target the scrollbar track */
+/* For WebKit-based browsers */
+::-webkit-scrollbar {
+  width: 0px;
+  /* Width of the scrollbar */
+}
+
+main {
+  background-color: rgba(23, 23, 23, 0.35);
+}
+
 /* Adjust padding as needed */
 .page-content {
-  padding: 20px;
   z-index: 1;
   /* Ensure content is above the pseudo-element */
 }
@@ -705,7 +723,6 @@ body::before {
 }
 
 #guidelines {
-  margin: 20px;
   margin-top: 50px;
 }
 #guidelines .container {
@@ -773,7 +790,6 @@ body::before {
 article {
   display: block;
   color: lightgrey;
-  background-color: rgba(23, 23, 23, 0.5);
   text-align: center;
   padding: 20px;
   border-radius: 25px;
@@ -781,7 +797,6 @@ article {
 
 #contribute {
   margin-top: 50px;
-  margin: 20px;
 }
 #contribute .container {
   width: 100%;
@@ -789,9 +804,6 @@ article {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-#contribute .container h2 {
-  margin: 20px;
 }
 #contribute .container p {
   background-image: url("/images/Water_Block_transparent80.png");
@@ -904,7 +916,7 @@ article {
 }
 #contribute footer:nth-child(3) .container h3 {
   background-image: url("/images/Ice_Block_transparent90.png");
-  margin: 10px;
+  margin-right: 10px;
   width: 125px;
   height: 125px;
   background-size: contain;
@@ -951,14 +963,13 @@ article {
 }
 
 #about {
-  margin: 20px;
-  margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 #about .container:first-child {
+  margin-top: 50px;
   z-index: 1;
   display: grid;
   grid-template-columns: auto auto auto;
@@ -979,6 +990,7 @@ article {
   overflow: hidden;
   color: transparent;
   border: 3px solid #262522;
+  text-shadow: 2px 2px transparent;
   transition: width 0.75s ease-in-out, height 0.75s ease-in-out;
   /* Add width and height to the transition */
 }
@@ -986,10 +998,19 @@ article {
   z-index: 50;
   width: 406.25px;
   height: 406.25px;
-  color: #c4b9b6ff;
+  color: #262522;
+  text-shadow: 1px 1px #262522;
+}
+#about .container:first-child > *:hover a {
+  color: #457520ff;
 }
 #about .container:first-child > * a {
   color: transparent;
+  text-decoration: none;
+}
+#about .container:first-child > * a:hover {
+  color: #8fca5cff;
+  text-shadow: 1px 1px #262522;
 }
 #about .container:first-child > :nth-child(1) {
   background-image: url("/images/Stone_Block.png");
@@ -1015,8 +1036,6 @@ article {
   /* Set the width */
   height: 125px;
   /* Set the height */
-  padding: 20px;
-  /* Set padding if needed */
   position: relative;
   /* Add position relative */
   overflow: hidden;
@@ -1026,6 +1045,9 @@ article {
   /* Add width and height to the transition */
   z-index: 0;
   /* Ensure the fake element is below other elements */
+}
+#about .container:last-child {
+  margin-top: 100px;
 }
 #about .container:last-child > :nth-child(-n+3) {
   display: grid;
@@ -1037,12 +1059,10 @@ article {
   /* Center items vertically */
   background-image: url("/images/Stone_Block.png");
   background-size: contain;
-  width: 100%;
   height: 200px;
   padding: 10px;
   border: 3px solid #262522;
   text-shadow: 1px 1px 1px #262522;
-  padding: 0px 100px 0px 100px;
 }
 #about .container:last-child > :nth-child(-n+3):nth-child(2) {
   background-image: url("/images/Lava_Block.png");

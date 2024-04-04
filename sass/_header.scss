@@ -1,6 +1,6 @@
-// Header Styles
 header {
-  color: skyblue;
+  color: $color-sky;
+  text-shadow: 3px 3px $color-background;
   background-image: url("/images/Grass_Block.webp"); // Set your desired background image
   background-repeat: repeat-x; // Repeat background image horizontally but not vertically
   background-size: contain; // Make the background image size fit the container
@@ -9,33 +9,43 @@ header {
   justify-content: center; // Center content horizontally
   align-items: center; // Center content vertically
 
+
   .container {
-    background-color: $transparent;
+    //background-color: $transparent;
+    padding-bottom: 10px;
     width: 100%;
     display: flex;
     flex-direction: column; // Apply flex column
     align-items: center; // Center content horizontally
+    background-color: $transparent;
 
     h1 {
-      font-size: var(--font-size-h1); // Use font size from theme
+      font-family: 'minecraft-title', sans-serif;
+      font-size: $font-size-h1 * 1.5; // Use font size from theme
       font-weight: var(--font-weight-strong); // Set font weight
     }
 
     h2 {
+      color: $color-primary-alt2;
       font-size: calc(var(--font-size-h2) * 0.75); // Adjust the font size by multiplying it to make it smaller
       font-weight: var(--font-weight-strong); // Set font weight
       margin-bottom: 10px; // Adjust margin as needed
+      width: 600px;
+      text-align: center;
     }
 
     .link-github {
       display: flex;
       align-items: center; // Center SVG vertically
+      text-shadow: 0px 0px $color-background;
+      padding-top: 10px;
 
       svg {
         width: 20px; // Set SVG width
         height: 20px; // Set SVG height
         fill: $color-background; // Set your desired icon color
         margin-right: 10px; // Adjust margin as needed
+        
       }
     }
   }
