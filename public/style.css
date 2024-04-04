@@ -85,7 +85,7 @@ header .container {
 }
 header .container h1 {
   font-family: "minecraft-title", sans-serif;
-  font-size: 6rem;
+  font-size: 5rem;
   font-weight: var(--font-weight-strong);
 }
 header .container h2 {
@@ -686,6 +686,22 @@ body::before {
   background-image: url("/images/render1.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+body .skip-link {
+  overflow: hidden;
+  /* Hide overflowing content */
+  white-space: nowrap;
+  /* Prevent line breaks */
+  text-overflow: ellipsis;
+  /* Show ellipsis for overflowed text */
+  width: 100px;
+  /* Adjust width as needed */
+  height: 100px;
+  /* Adjust height as needed */
+  border-radius: 0px 0px 100px 0px;
+  /* Apply border-radius */
+  background-color: skyblue;
 }
 
 /* Target the scrollbar track */

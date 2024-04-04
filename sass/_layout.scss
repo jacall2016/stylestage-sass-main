@@ -17,6 +17,16 @@ body::before {
   background-size: cover;
 }
 
+body .skip-link {
+  overflow: hidden; /* Hide overflowing content */
+  white-space: nowrap; /* Prevent line breaks */
+  text-overflow: ellipsis; /* Show ellipsis for overflowed text */
+  width: 100px; /* Adjust width as needed */
+  height: 100px; /* Adjust height as needed */
+  border-radius: 0px 0px 100px 0px; /* Apply border-radius */
+  background-color: $color-sky;
+}
+
 /* Target the scrollbar track */
 /* For WebKit-based browsers */
 ::-webkit-scrollbar {
