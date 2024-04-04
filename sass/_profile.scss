@@ -169,3 +169,13 @@
     }
   }
 }
+
+.profile div:last-child > *:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: radial-gradient(circle, $color-sky 30%, transparent 70%);
+  width: 1500px;
+  height: 70px;
+}
