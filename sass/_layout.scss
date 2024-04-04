@@ -25,6 +25,13 @@ body .skip-link {
   height: 100px; /* Adjust height as needed */
   border-radius: 0px 0px 100px 0px; /* Apply border-radius */
   background-color: $color-sky;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+  &:hover {
+    width: 150px;
+    height: 150px;
+    border-radius: 0px 0px 150px 0px;
+    white-space: wrap;
+  }
 }
 
 /* Target the scrollbar track */
