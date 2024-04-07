@@ -109,6 +109,15 @@ header .container .link-github svg {
   margin-right: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  header .container h1 {
+    font-size: 4rem;
+  }
+  header .container h2 {
+    font-size: 2rem;
+    width: 100%;
+  }
+}
 .profile {
   margin: 0%;
   background-color: rgba(23, 23, 23, 0.35);
@@ -554,6 +563,18 @@ p .page-footer .container a:hover {
   fill: #413f3a;
 }
 
+@media screen and (max-width: 768px) {
+  .page-footer .container {
+    width: 100%;
+    /* Set width to 100% */
+  }
+  .page-footer .container p {
+    width: 100%;
+    /* Set width to 100% */
+    margin-top: 20px;
+    /* Adjust margin as needed */
+  }
+}
 nav {
   position: -webkit-sticky;
   /* For Safari */
@@ -589,6 +610,26 @@ nav ul li a:hover {
   background-color: #457520ff;
 }
 
+@media screen and (max-width: 768px) {
+  nav {
+    position: relative;
+    /* Remove sticky positioning */
+  }
+  nav ul {
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center items horizontally */
+    padding: 0;
+    /* Remove default padding */
+    margin: 0;
+    /* Remove default margin */
+  }
+  nav ul li a {
+    padding: 10px 0 10px 0;
+    /* Add padding to top and bottom */
+  }
+}
 a {
   color: #457520ff;
   text-decoration: none;
@@ -604,6 +645,43 @@ a:hover {
 
 .link-github {
   color: #262522;
+}
+
+[class^=link]:not(.link-codepen),
+#contribute .container p a {
+  --btn-size: 30pt;
+  font-size: 20px;
+  height: calc(var(--btn-size) * 1);
+  width: calc(var(--btn-size) * 10);
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  user-select: none;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  padding-bottom: 0.3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffa0e0 url("https://i.ibb.co/rb2TWXL/bgbtn.png") center/cover;
+  image-rendering: pixelated;
+  border: 2px solid #262522;
+  color: #c4b9b6ff;
+  text-shadow: 2px 2px #262522;
+  box-shadow: inset -2px -4px #262522, inset 2px 2px #c4b9b6ff;
+}
+[class^=link]:not(.link-codepen):hover,
+#contribute .container p a:hover {
+  background-color: rgba(100, 100, 255, 0.45);
+  z-index: 2;
+  text-shadow: 2px 2px #262522;
+  color: #ffffa0e0;
+}
+[class^=link]:not(.link-codepen):active,
+#contribute .container p a:active {
+  box-shadow: inset -2px -4px #262522, inset 2px 2px #c4b9b6ff;
 }
 
 #guidelines .container a {
@@ -994,6 +1072,113 @@ article {
   transform: scale(1.1);
 }
 
+@media screen and (max-width: 768px) {
+  #guidelines .container {
+    grid-template-columns: auto;
+    /* Adjusted for one column on mobile */
+  }
+
+  #contribute .container:nth-child(2) {
+    flex-direction: column;
+  }
+  #contribute .container:nth-child(2) h3 {
+    margin-top: 0px;
+    margin-right: 0px;
+    width: 100%;
+    height: 300px;
+    border-radius: 0%;
+    box-shadow: 0px 0px 0 0 #c4b9b6ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #contribute .container:nth-child(2) h3::before,
+#contribute .container:nth-child(2) h3::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 300px;
+    background-image: url("/images/Wood_Block_light.png");
+    background-size: contain;
+    background-color: #c4b9b6ff;
+    /* Change this to your desired color */
+    z-index: -1;
+    transform: rotate(45deg);
+  }
+  #contribute .container:nth-child(2) ol {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 0;
+  }
+  #contribute .container:nth-child(2) ol li {
+    position: absolute;
+    background-color: #c4b9b6ff;
+    border-radius: 0 100px 100px 0;
+    color: #c4b9b6ff;
+    width: 50px;
+    height: 50px;
+    text-align: left;
+    box-shadow: 5px 5px 10px 1px #262522;
+    padding: 30px;
+    padding-left: 60px;
+    margin-left: -50px;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out, width 0.2s ease-in-out, background-color 0.5s ease-in-out;
+  }
+  #contribute .container:nth-child(2) ol li:nth-child(1) {
+    transform: translateY(100px);
+  }
+  #contribute .container:nth-child(2) ol li:nth-child(2) {
+    transform: translateY(50px);
+  }
+  #contribute .container:nth-child(2) ol li:nth-child(3) {
+    transform: translateY(0px);
+  }
+  #contribute .container:nth-child(2) ol li:nth-child(4) {
+    transform: translateY(-50px);
+  }
+  #contribute .container:nth-child(2) ol li a {
+    color: #c4b9b6ff;
+  }
+
+  body .skip-link:hover {
+    overflow: hidden;
+    /* Hide overflowing content */
+    white-space: nowrap;
+    /* Prevent line breaks */
+    text-overflow: ellipsis;
+    /* Show ellipsis for overflowed text */
+    width: 100px;
+    /* Adjust width as needed */
+    height: 100px;
+    /* Adjust height as needed */
+    border-radius: 0px 0px 100px 0px;
+    /* Apply border-radius */
+    background-color: skyblue;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+  }
+
+  a:hover a {
+    color: #c4b9b6ff;
+  }
+
+  h3:hover {
+    background-image: url("/images/Ice_Block_transparent90.png");
+    margin-right: 10px;
+    width: 125px;
+    height: 125px;
+    background-size: contain;
+    color: #262522;
+    text-shadow: 1px 1px 1px #262522;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .skip-link {
+    display: none;
+  }
+}
 #about {
   display: flex;
   flex-direction: column;
@@ -1100,6 +1285,12 @@ article {
   background-image: url("/images/Water_Block.png");
   padding: 10px 125px 10px 50%;
   text-align: right;
+}
+@media (max-width: 768px) {
+  #about .container:last-child > :nth-child(-n+3):nth-child(2) {
+    padding: 10px;
+    text-align: center;
+  }
 }
 #about .container:last-child > :nth-child(-n+3):nth-child(3) {
   background-image: url("/images/Desert_Block.png");
@@ -1313,4 +1504,37 @@ article {
 #about .container:last-child > :nth-last-child(1) {
   background-image: url("/images/Stone_Block.png");
   padding: 10px;
+}
+
+@media (hover: none) and (max-width: 768px) {
+  #about .container a {
+    padding: 10px 0 10px 0;
+    /* Add padding to top and bottom */
+  }
+
+  #about .container p {
+    padding: 10px 0 10px 0;
+    /* Add padding to top and bottom */
+  }
+
+  #about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #about .container:first-child {
+    display: block;
+    margin-top: 50px;
+    z-index: 50;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    /* Center the grid horizontally */
+    align-items: center;
+    /* Center the grid vertically */
+    transform: none;
+    width: 406px;
+    color: black;
+  }
 }
