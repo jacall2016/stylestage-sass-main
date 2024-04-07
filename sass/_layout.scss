@@ -404,10 +404,7 @@ article {
       } 
     } 
   } 
-  .skip-link {
-    display: none; // Hide the skip link
-  }
-
+  
   //Cancel out hover effect on mobile
   body .skip-link:hover {
     overflow: hidden; /* Hide overflowing content */
@@ -433,5 +430,8 @@ article {
     color: $color-background;
     text-shadow: 1px 1px 1px $color-background;
     transition: transform 0.3s ease-in-out; 
+  }
+  .skip-link {
+    display: none; // Hide the skip link
   }
 }
