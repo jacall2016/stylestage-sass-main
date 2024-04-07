@@ -98,6 +98,10 @@
                 background-image: url("/images/Water_Block.png");
                 padding: 10px 125px 10px 50%;
                 text-align: right;
+                @media (max-width: 768px) {
+                    padding: 10px;
+                    text-align: center;
+                }
             }
 
             &:nth-child(3) {
@@ -315,7 +319,7 @@
 }
 
 // MOBILE VIEW
-@media screen and (hover: none) and (max-width: 768px) {
+@media (hover: none) and (max-width: 768px) {
     #about .container a {
         padding: 10px 0 10px 0; /* Add padding to top and bottom */
     }

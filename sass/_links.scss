@@ -84,7 +84,7 @@ a {
 
 [class^="link"]:not(.link-codepen),
 #contribute .container p a{
-  //@include button-style()
+  @include button-style()
 }
 
 #guidelines .container a {
