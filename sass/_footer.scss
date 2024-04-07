@@ -1,5 +1,5 @@
 .page-footer {
-    background-image: url("/images/Stone_Block.png");
+    background-image: url("/images/Lava_Block.png");
     color: $color-background;
     padding: $padding; /* Use padding variable */
     background-repeat: repeat-x; /* Repeat background image horizontally but not vertically */
@@ -26,7 +26,7 @@
 
             &:nth-child(1) {
                 margin-top: -75px;
-                border-radius: 50px 50px 0 50px;
+                border-radius: 20px 20px 0 20px;
                 transform: translateX(100px);
                 transition: transform  0.3s ease-in-out;
                 &:hover {
@@ -37,9 +37,14 @@
 
             &:nth-child(3) {
                 margin-top: -75px;
-                border-radius: 50px 50px 0 50px;
+                border-radius: 20px 20px 0 20px;
                 transform: translateX(100px);
                 transition: transform  0.3s ease-in-out;
+                a {
+                    &:hover {
+                        color: $color-primary-alt2; 
+                    }
+                }
                 &:hover {
                     z-index: 1;
                     transform: scale(1.1) translateX(125px);
@@ -48,7 +53,7 @@
 
             &:nth-child(4) {
                 margin-top: -100px;
-                border-radius: 50px 50px 50px 0;
+                border-radius: 20px 20px 20px 0;
                 transform: translateX(-100px);
                 transition: transform  0.3s ease-in-out;
                 &:hover {
@@ -68,10 +73,10 @@
             list-style-type: none;
             background-color: $color-primary;
             padding: 10px;
-            border-radius: 50px 50px 50px 0;
+            border-radius: 20px 20px 20px 0;
             height: 200px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
+            flex-direction: column;
             justify-content: center; /* Center the list items horizontally */
             flex-wrap: wrap;
             transition: transform 0.3s ease; /* Add transition for hover effect */
@@ -87,6 +92,9 @@
             color: $color-secondary;
             text-decoration: none;
             transition: color 0.3s ease;
+            width: 100%;
+            border-radius: 5px;
+            p
 
             &:hover {
                 color: lighten($color-background, 10%);
@@ -100,6 +108,19 @@
                 &:hover {
                     fill: lighten($color-background, 10%);
                 }
+            }
+        }
+    }
+}
+
+// MOBILE VIEW
+@media screen and (max-width: 768px) {
+    .page-footer {
+        .container {
+            width: 100%; /* Set width to 100% */
+            p {
+                width: 100%; /* Set width to 100% */
+                margin-top: 20px; /* Adjust margin as needed */
             }
         }
     }

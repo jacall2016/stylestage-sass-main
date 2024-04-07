@@ -1,5 +1,116 @@
 #about {
-    .container {
+    //margin: 20px;
+    //margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .container:first-child {
+        margin-top: 50px;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: center; /* Center the grid horizontally */
+        align-items: center; /* Center the grid vertically */
+    }
+    
+    .container:first-child > * {
+        align-items: center;
+        background-image: url("/images/Water_Block_transparent80.png");
+        background-size: contain;
+        width: $block-size;
+        height: $block-size;
+        padding: 20px;
+        position: relative; /* Add position relative */
+        overflow: hidden;
+        color: transparent;
+        border: 3px solid $color-background;
+        text-shadow: 2px 2px transparent;
+        transition:width 0.75s ease-in-out, height 0.75s ease-in-out; /* Add width and height to the transition */
+        &:hover {
+            z-index: 50;
+            width: $block-size * 3.25;
+            height: $block-size * 3.25;
+            color: $color-background;
+            text-shadow: 1px 1px $color-background;
+            a {
+                color: $color-secondary;
+            }
+        }
+        a {
+            color: transparent;
+            text-decoration: none;
+            &:hover {
+                color: $color-primary-alt;
+                text-shadow: 1px 1px $color-background;
+            }
+        }
+    }
+
+    .container:first-child > :nth-child(1) {
+        background-image: url("/images/Stone_Block.png");
+    }
+
+    .container:first-child > :nth-child(2) {
+        background-image: url("/images/Lava_Block.png");
+    }
+
+    .container:first-child > :nth-child(3) {
+        background-image: url("/images/Desert_Block.png");
+    }
+
+    .container:first-child > :nth-child(4) {
+        background-image: url("/images/ice_Block_transparent90.png");
+    }
+
+    .container:first-child::after {
+        content: ""; /* Required for the pseudo-element */
+        grid-column: 3; /* Place the fake element in the last column */
+        background-image: url("/images/Green_Block.png"); /* Set the background image for the fake element */
+        background-size: contain;
+        width: $block-size; /* Set the width */
+        height: $block-size; /* Set the height */
+        position: relative; /* Add position relative */
+        overflow: hidden;
+        color: transparent;
+        border: 3px solid $color-background;
+        transition: width 0.75s ease-in-out, height 0.75s ease-in-out; /* Add width and height to the transition */
+        z-index: 0; /* Ensure the fake element is below other elements */
+    }
+
+    .container:last-child {
+        margin-top: 100px;
+        &> :nth-child(-n+3) {
+            display: grid;
+            grid-template-columns: auto auto; /* Two columns for the grid with automatic width */
+            justify-items: center; /* Center items horizontally */
+            align-items: center; /* Center items vertically */
+            background-image: url("/images/Ice_Block.png");
+            background-size: contain;
+            //width: 50%;
+            //transform: translateX(50%);
+            height: 200px;
+            padding: 10px;
+            border: 3px solid $color-background;
+            text-shadow: 1px 1px 1px $color-background;
+            
+            &:nth-child(2) {
+                background-image: url("/images/Water_Block.png");
+                padding: 10px 125px 10px 50%;
+                text-align: right;
+                @media (max-width: 768px) {
+                    padding: 10px;
+                    text-align: center;
+                }
+            }
+
+            &:nth-child(3) {
+                background-image: url("/images/Desert_Block.png");
+                background-size: contain;
+                text-align: right;
+            }
+        }
+
         &:nth-child(2) {
             ul {
                 display: flex;
@@ -7,9 +118,9 @@
                 justify-content: center; /* Center horizontally */
                 height: 1000px;
                 align-items: center; /* Center vertically */
-                background-color: rgba(135, 207, 235, 0.75);
+                background-color: $color-fade-sky;
                 margin: 40px;
-                box-shadow: 0px 0px 60px 100px rgba(135, 207, 235, 0.75); /* Outer border */
+                box-shadow: 0px 0px 60px 100px $color-fade-sky; /* Outer border */
                 li {
                     position: absolute;
                     background-image: url("/images/Leaves_Block.png");
@@ -183,5 +294,56 @@
                 }
             }
         }
+    }
+}
+
+#about .container:last-child > :nth-last-child(-n+2) {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto; /* Two columns for the grid with automatic width */
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    background-image: url("/images/Grass_Block.webp");
+    background-size: contain;
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    border: 3px solid $color-background;
+    text-shadow: 1px 1px 1px $color-background;
+    padding: 10px 25% 10px 25%;
+}
+
+#about .container:last-child > :nth-last-child(1) {
+    background-image: url("/images/Stone_Block.png");
+    padding: 10px;
+}
+
+// MOBILE VIEW
+@media (hover: none) and (max-width: 768px) {
+    #about .container a {
+        padding: 10px 0 10px 0; /* Add padding to top and bottom */
+    }
+
+    #about .container p {
+        padding: 10px 0 10px 0; /* Add padding to top and bottom */
+    }
+
+    #about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #about .container:first-child {
+        display: block;
+        margin-top: 50px;
+        z-index: 50;
+        grid-template-columns: auto auto auto;
+        justify-content: center; /* Center the grid horizontally */
+        align-items: center; /* Center the grid vertically */
+        transform: none;
+        width: 406px;
+        color: black;
     }
 }

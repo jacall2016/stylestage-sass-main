@@ -1,10 +1,10 @@
 .profile {
-  padding: 20px; /* Add padding */
-  border-radius: 10px; /* Add border radius */
-  
+  margin: 0%;
+  background-color: $transparent;
+  /*
   .container > :last-child {
     display: none;
-  }
+  }*/
 
   .container {
     display: flex;
@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto; /* Center the container horizontally */
-    background-color: $transparent;
+    //background-color: $transparent;
     border-radius: 25px;
     #profile-title {
       text-align: center;
@@ -39,21 +39,24 @@
       li {
         width: 300px;
         height: 300px;
-        border-radius: 50% 50% 50% 0;
+        //border-radius: 50% 50% 50% 0;
+        background-image: url("/images/Green_Block.png");
+        background-size: cover;
         margin: 0px;
         display: flex; /* Use flexbox to center contents */
         justify-content: center; /* Center contents horizontally */
         align-items: center; /* Center contents vertically */
+        border: 2px solid $color-background;
 
         &:nth-child(1) {
           background-color: $color-primary-alt; /* Set your desired color */
-          border-top: $color-secondary 5px solid;
-          border-right: $color-secondary 5px solid;
+          //border-top: $color-secondary 5px solid;
+          //border-right: $color-secondary 5px solid;
           transform: rotate(-90deg);
           transition: transform 0.5s ease-in-out;
           &:hover {
             z-index: 1;
-            transform: scale(1.2) rotate(90deg);
+            transform: scale(1.0) rotate(90deg);
             transition: transform 0.5s ease-in-out;
             span {
               transform: rotate(-90deg);
@@ -66,15 +69,14 @@
         }
         
         &:nth-child(2) {
+          background-image: url("/images/Ice_Block_transparent90.png");
           background-color: $color-secondary; /* Set your desired color */
-          border-top: $color-primary-alt 5px solid;
-          border-right: $color-primary-alt 5px solid;
           display: flex;
           flex-direction: column;
           transition: transform 0.5s ease-in-out;
           &:hover {
             z-index: 1;
-            transform: scale(1.2) rotate(180deg);
+            transform: scale(1.0) rotate(180deg);
             transition: transform 0.5s ease-in-out;
             span {
               transform: rotate(-180deg);
@@ -83,14 +85,15 @@
         }
   
         &:nth-child(3) {
+          background-image: url("/images/Desert_Block.png");
           background-color: $color-secondary; /* Set your desired color */
-          border-top: $color-primary-alt 5px solid;
-          border-right: $color-primary-alt 5px solid;
+          //border-top: $color-primary-alt 5px solid;
+          //border-right: $color-primary-alt 5px solid;
           transform: rotate(-180deg);
           transition: transform 0.5s ease-in-out;
           &:hover {
             z-index: 1;
-            transform: scale(1.2) rotate(-360deg);
+            transform: scale(1.0) rotate(-360deg);
             transition: transform 0.5s ease-in-out;
             span {
               transform: rotate(0deg);
@@ -103,14 +106,15 @@
         }
         
         &:nth-child(4) {
+          background-image: url("/images/Lava_Block.png");
           background-color: $color-primary-alt; /* Set your desired color */
-          border-top: $color-secondary 5px solid;
-          border-right: $color-secondary 5px solid;
+          //border-top: $color-secondary 5px solid;
+          //border-right: $color-secondary 5px solid;
           transform: rotate(90deg);
           transition: transform 0.5s ease-in-out;
           &:hover {
             z-index: 1;
-            transform: scale(1.2) rotate(270deg);
+            transform: scale(1.0) rotate(270deg);
             transition: transform 0.5s ease-in-out;
             span {
               transform: rotate(90deg);
@@ -150,7 +154,7 @@
 
   #profile-title {
     margin-bottom: 15px; /* Add space below the title */
-    color: #333; /* Set title color */
+    color: $color-background; /* Set title color */
     font-size: $font-size-h4;
   }
 
@@ -163,19 +167,15 @@
       margin-bottom: 10px; /* Add space between list items */
       font-size: 16px; /* Set font size for list items */
     }
-
-    span {
-      margin-right: 5px; /* Add space between spans */
-    }
-
-    a {
-      color: #007bff; /* Set link color */
-      text-decoration: none; /* Remove default underline */
-      transition: color 0.3s ease; /* Add smooth transition for color change */
-
-      &:hover {
-        color: #0056b3; /* Change link color on hover */
-      }
-    }
   }
+}
+
+.profile div:last-child > *:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: radial-gradient(circle, $color-sky 30%, transparent 70%);
+  width: 1500px;
+  height: 70px;
 }

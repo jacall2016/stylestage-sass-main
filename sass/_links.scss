@@ -15,22 +15,22 @@
   justify-content: center; 
   align-items: center;
 
-	background: #999 url('https://i.ibb.co/rb2TWXL/bgbtn.png') center / cover;
+	background: $color-primary-alt2 url('https://i.ibb.co/rb2TWXL/bgbtn.png') center / cover;
 	image-rendering: pixelated;
-	border: 2px solid #000;
+	border: 2px solid $color-background;
 
-  color: #DDD;
-  text-shadow: 2px 2px #000A;
-  box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
+  color: $color-primary;
+  text-shadow: 2px 2px $color-background;
+  box-shadow: inset -2px -4px $color-background, inset 2px 2px $color-primary;
 
 	&:hover {
-		background-color: rgba(100, 100, 255, .45);
+		background-color: $color-titiary;
     z-index: 2;
-		text-shadow: 2px 2px #202013CC;
-		color: #FFFFA0;
+		text-shadow: 2px 2px $color-background;
+		color: $color-primary-alt2;
 	}
 	&:active {
-		box-shadow: inset -2px -4px #0004, inset 2px 2px #FFF5;
+		box-shadow: inset -2px -4px $color-background, inset 2px 2px $color-primary;
 	}
 }
 
@@ -39,7 +39,7 @@ a {
   text-decoration: none;
 
   &:hover {
-
+    color: $color-primary-alt2;
   }
 }
 
@@ -71,6 +71,7 @@ a {
 
 .link-allstyles {
   // Add styles for all styles link
+  
 }
 
 .link-rss {
@@ -82,10 +83,14 @@ a {
 }
 
 [class^="link"]:not(.link-codepen),
-.profile .container > a {
+#contribute .container p a{
   @include button-style()
 }
 
 #guidelines .container a {
+  @include button-style()
+}
+
+#contribute .container p:nth-child(3) a {
   @include button-style()
 }

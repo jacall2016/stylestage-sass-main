@@ -5,7 +5,7 @@
   width: 1px;
   height: 1px;
   background-color: var(--color-secondary);
-  color: #fff;
+  color: $color-primary;
   font-size: 1.125rem;
   overflow: hidden;
 
@@ -44,15 +44,15 @@
   justify-content: center; 
   align-items: center;
 
-	background: #999 url('https://i.ibb.co/rb2TWXL/bgbtn.png') center / cover;
+	background: $color-primary url('https://i.ibb.co/rb2TWXL/bgbtn.png') center / cover;
 	image-rendering: pixelated;
 	border: 2px solid #000;
 
   // @include flex-center-hv;
 
-  color: #DDD;
+  color: $color-primary;
   text-shadow: 2px 2px #000A;
-  box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
+  box-shadow: inset -2px -4px $color-background, inset 2px 2px $color-primary;
 
 	&:hover {
 		background-color: rgba(100, 100, 255, .45);
@@ -61,7 +61,7 @@
 		color: #FFFFA0;
 	}
 	&:active {
-		box-shadow: inset -2px -4px #0004, inset 2px 2px #FFF5;
+		box-shadow: inset -2px -4px #0004, inset 2px 2px $color-primary;
 	}
 }
 
