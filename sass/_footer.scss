@@ -112,3 +112,16 @@
         }
     }
 }
+
+// MOBILE VIEW
+@media screen and (max-width: 768px) {
+    .page-footer {
+        .container {
+            width: 100%; /* Set width to 100% */
+            p {
+                width: 100%; /* Set width to 100% */
+                margin-top: 20px; /* Adjust margin as needed */
+            }
+        }
+    }
+}

@@ -50,3 +50,20 @@ header {
     }
   }
 }
+
+// MOBILE VIEW
+@media screen and (max-width: 768px) {
+  header {
+    .container {
+      h1 {
+        font-size: $font-size-h1; // Use font size from theme
+      }
+
+      h2 {
+        font-size: $font-size-h2; // Use font size from theme
+        width: 100%; // Set width to 100%
+      }
+    }
+    
+  }
+}

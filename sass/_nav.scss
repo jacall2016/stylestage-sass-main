@@ -29,3 +29,22 @@ nav {
     }
   }
 }
+
+// MOBILE VIEW
+@media screen and (max-width: 768px) {
+  nav {
+    position: relative; /* Remove sticky positioning */
+    ul {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items horizontally */
+      padding: 0; /* Remove default padding */
+      margin: 0; /* Remove default margin */
+      
+      li {
+        a {
+          padding: 10px 0 10px 0; /* Add padding to top and bottom */
+        }
+      }
+    }
+  }
+}

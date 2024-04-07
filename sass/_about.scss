@@ -313,3 +313,33 @@
     background-image: url("/images/Stone_Block.png");
     padding: 10px;
 }
+
+// MOBILE VIEW
+@media screen and (hover: none) and (max-width: 768px) {
+    #about .container a {
+        padding: 10px 0 10px 0; /* Add padding to top and bottom */
+    }
+
+    #about .container p {
+        padding: 10px 0 10px 0; /* Add padding to top and bottom */
+    }
+
+    #about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #about .container:first-child {
+        display: block;
+        margin-top: 50px;
+        z-index: 50;
+        grid-template-columns: auto auto auto;
+        justify-content: center; /* Center the grid horizontally */
+        align-items: center; /* Center the grid vertically */
+        transform: none;
+        width: 406px;
+        color: black;
+    }
+}
